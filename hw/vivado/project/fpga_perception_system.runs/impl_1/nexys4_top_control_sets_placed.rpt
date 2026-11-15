@@ -1,0 +1,1202 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Sat Nov 14 22:49:13 2026
+| Host         : Gaurav running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file nexys4_top_control_sets_placed.rpt
+| Design       : nexys4_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |  1124 |
+|    Minimum number of control sets                        |   992 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |   132 |
+| Unused register locations in slices containing registers |  1780 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |  1124 |
+| >= 0 to < 4        |    34 |
+| >= 4 to < 6        |   105 |
+| >= 6 to < 8        |   346 |
+| >= 8 to < 10       |    92 |
+| >= 10 to < 12      |     7 |
+| >= 12 to < 14      |    92 |
+| >= 14 to < 16      |    10 |
+| >= 16              |   438 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            3694 |         1161 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             420 |          188 |
+| Yes          | No                    | No                     |            9118 |         3193 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            8804 |         3282 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+--------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|     Clock Signal     |                   Enable Signal                  |              Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+--------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/tx_valid_i_1__0_n_0                  | rst_repN_10                               |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/mosi_i_1_n_0                               | rst_repN_8                                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tx/txd_i_1_n_0                           | rst_repN_5                                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/npass[5]_i_2_n_0                      | u_sys/u_pp/npass[5]_i_1_n_0               |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/v17                           | u_sys/u_core/u_eng/act_wdata[127]_i_1_n_0 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/sclk_i_1_n_0                               | rst_repN_8                                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/st[5]_i_1_n_0                         | rst_repN_3                                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/cnt_reg[0][0]                  | rst_repN_16                               |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/E[0]                                  | rst_repN_19                               |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/n_err_reg[2]_0                       | rst_repN_2                                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pk/busy_i_1__2_n_0                       | rst_repN_5                                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/cnt_reg[0][1]                  | rst_repN_16                               |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_3                                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/if_pop                               | rst_repN_6                                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/p_0_in                               | rst_repN_18                               |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/kd[6]_i_1_n_0                         | u_sys/u_pp/kd[5]_i_1_n_0                  |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/n_obj[5]_i_1_n_0                      | rst_repN_11                               |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/tx_valid_i_1__0_n_0                  | rst_repN_5                                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/nk[5]_i_2_n_0                         | u_sys/u_pp/nk[5]_i_1_n_0                  |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/tx_valid_i_1__0_n_0                  | rst_repN_14                               |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/v17                           | u_sys/u_core/u_eng/act_wdata[7]_i_1_n_0   |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/byte_valid_reg_0[1]            | rst_repN_11                               |                1 |              2 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/cs1_n_i_1_n_0                              | rst_repN_8                                |                1 |              2 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/sample_valid_reg_0                         | rst_repN_6                                |                1 |              2 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/byte_valid_reg_0[1]            | rst_repN_18                               |                1 |              2 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/byte_valid_reg_0[0]            | rst_repN_11                               |                2 |              2 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/act_re_reg_0                  |                                           |                1 |              2 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/byte_valid_reg_0[0]            | rst_repN_18                               |                1 |              2 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/sample_valid_reg_0                         | rst_repN_14                               |                2 |              3 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/wbuf_reg[0]                    | rst_repN_18                               |                1 |              3 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/wbuf_reg_0[0]                  | rst_repN_18                               |                1 |              3 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/o_grp_base[13]_i_1_n_0        | u_sys/u_core/u_eng/o_grp_base[4]_i_1_n_0  |                1 |              3 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/cur                                  | rst_repN_14                               |                2 |              3 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_7                                |                2 |              3 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[129]_5       |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/icg[3]_i_1_n_0                |                                           |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[63]_6        |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/a_rnd[13]_i_1_n_0             | u_sys/u_core/u_eng/b_rnd[7]_i_1_n_0       |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[95]_12       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/a_rnd[13]_i_1_n_0             | u_sys/u_core/u_eng/b_rnd[15]_i_1_n_0      |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/li[3]_i_1_n_0                       | rst_repN_5                                |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/npass[5]_i_2_n_0                      |                                           |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/nk[5]_i_2_n_0                         |                                           |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/kd[6]_i_1_n_0                         |                                           |                4 |              4 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_1                                |                4 |              4 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[129]_7       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pk/ob[3]_i_2_n_0                         | u_sys/u_pk/ob[3]_i_1_n_0                  |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pk/fb_re                                 |                                           |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/a_zv6_out                             |                                           |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/byte_valid_reg_0[1]            | rst_repN_5                                |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/byte_valid_reg_0[0]            | rst_repN_5                                |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/v1n                                   |                                           |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[95]_10       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[63]_5        |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[95]_13       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_16                               |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[95]_11       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[63]_4        |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[457]_14      |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[425]_6       |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[457]_10      |                4 |              4 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[425]_7       |                4 |              4 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[457]_8       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[490]_4       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tx/bitn                                  | u_sys/u_tx/shreg                          |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[457]_13      |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[425]_4       |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[490]_7       |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[457]_11      |                4 |              4 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[523]_7       |                4 |              4 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[523]_4       |                4 |              4 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[391]_7       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[425]_5       |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[391]_5       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[391]_4       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[523]_6       |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[457]_9       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[523]_5       |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[490]_6       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[457]_12      |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[457]_15      |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[391]_6       |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[490]_5       |                4 |              4 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[359]_5       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[30]_5        |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[30]_6        |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[359]_4       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[326]_7       |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[294]_6       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[326]_6       |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[326]_5       |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[294]_7       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[294]_5       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[326]_4       |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/step[3]_i_1_n_0                            | rst_repN_8                                |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[261]_5       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[359]_7       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[261]_7       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[294]_4       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[261]_6       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[359]_6       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[30]_7        |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[261]_4       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[30]_4        |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[194]_9       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/dsh                                  | rst_repN_16                               |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[194]_12      |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[162]_4       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[194]_15      |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/ready6                               | rst_repN_18                               |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[228]_6       |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[194]_8       |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[194]_13      |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[162]_6       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[162]_7       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[194]_10      |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[162]_5       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[95]_8        |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[95]_9        |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[95]_15       |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[194]_11      |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[129]_4       |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[228]_7       |                4 |              4 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/if_pop                               | rst_repN_15                               |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[129]_6       |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[95]_14       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[228]_5       |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[228]_4       |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[194]_14      |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_prom/data_reg[63]_7        |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_13                               |                2 |              5 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_18                               |                2 |              5 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/bcnt                                 | rst_repN_14                               |                1 |              5 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/FSM_onehot_es[4]_i_1_n_0                   | rst_repN_8                                |                1 |              5 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/cur                                  | rst_repN_18                               |                2 |              5 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/tx_valid_i_1__0_n_0                  | rst_repN_18                               |                3 |              5 |         1.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zbin[4]_i_1_n_0                       |                                           |                5 |              5 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/n_obj[5]_i_1_n_0                      | rst_repN_19                               |                1 |              5 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dv_i[4]_i_1_n_0                       |                                           |                2 |              5 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[22][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[20][5]_i_1_n_0                    |                                           |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[52][5]_i_2_n_0                    | u_sys/u_pp/cy0[52][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[13][5]_i_1_n_0                    |                                           |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[60][5]_i_2_n_0                    | u_sys/u_pp/cy0[60][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[34][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[15][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[11][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN                                  |                5 |              6 |         1.20 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_12                               |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_10                               |                5 |              6 |         1.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[61][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[47][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[44][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[63][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_19                               |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[55][5]_i_2_n_0                    | u_sys/u_pp/cy0[55][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[54][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[49][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[37][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[41][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[32][5]_i_1_n_0                    |                                           |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[6][5]_i_1_n_0                     |                                           |                5 |              6 |         1.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[4][5]_i_1_n_0                     |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[61][5]_i_2_n_0                    | u_sys/u_pp/cy0[61][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[31][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw[1][95]_i_1_n_0                         | rst_repN_17                               |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[28][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[19][5]_i_1_n_0                    |                                           |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[33][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[63][5]_i_2_n_0                    | u_sys/u_pp/cy0[63][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[30][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[2][5]_i_1_n_0                     |                                           |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[29][5]_i_1_n_0                    |                                           |                5 |              6 |         1.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[53][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[35][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[24][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[38][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[10][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[7][5]_i_1_n_0                     |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/rxbuf                                      | rst_repN_17                               |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[59][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[28][5]_i_2_n_0                    | u_sys/u_pp/cy0[28][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[43][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[62][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[5][5]_i_1_n_0                     |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[50][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[43][5]_i_2_n_0                    | u_sys/u_pp/cy0[43][5]_i_1_n_0             |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[48][5]_i_1_n_0                    |                                           |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[45][5]_i_1_n_0                    |                                           |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[36][5]_i_1_n_0                    |                                           |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[40][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[52][5]_i_1_n_0                    |                                           |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[56][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[42][5]_i_1_n_0                    |                                           |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[33][5]_i_2_n_0                    | u_sys/u_pp/cy0[33][5]_i_1_n_0             |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[26][5]_i_2_n_0                    | u_sys/u_pp/cy0[26][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[29][5]_i_2_n_0                    | u_sys/u_pp/cy0[29][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[24][5]_i_2_n_0                    | u_sys/u_pp/cy0[24][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[39][5]_i_2_n_0                    | u_sys/u_pp/cy0[39][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[8][5]_i_1_n_0                     |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[32][5]_i_2_n_0                    | u_sys/u_pp/cy0[32][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[60][5]_i_1_n_0                    |                                           |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[46][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[58][5]_i_1_n_0                    |                                           |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[55][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[31][5]_i_2_n_0                    | u_sys/u_pp/cy0[31][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[51][5]_i_1_n_0                    |                                           |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[57][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[34][5]_i_2_n_0                    | u_sys/u_pp/cy0[34][5]_i_1_n_0             |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[50][5]_i_2_n_0                    | u_sys/u_pp/cy0[50][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/scnt                                 | rst_repN_10                               |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/E[0]                                 | rst_repN_10                               |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[18][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[0][5]_i_1_n_0                     |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[4][5]_i_2_n_0                     | u_sys/u_pp/cy0[4][5]_i_1_n_0              |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[37][5]_i_2_n_0                    | u_sys/u_pp/cy0[37][5]_i_1_n_0             |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_lc/st_reg[2]                        | u_sys/u_pp/u_lc/st_reg[1]                 |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[42][5]_i_2_n_0                    | u_sys/u_pp/cy0[42][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[25][5]_i_2_n_0                    | u_sys/u_pp/cy0[25][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[49][5]_i_2_n_0                    | u_sys/u_pp/cy0[49][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[39][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[46][5]_i_2_n_0                    | u_sys/u_pp/cy0[46][5]_i_1_n_0             |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[27][5]_i_1_n_0                    |                                           |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[17][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[62][5]_i_2_n_0                    | u_sys/u_pp/cy0[62][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[19][5]_i_2_n_0                    | u_sys/u_pp/cy0[19][5]_i_1_n_0             |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[51][5]_i_2_n_0                    | u_sys/u_pp/cy0[51][5]_i_1_n_0             |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[17][5]_i_2_n_0                    | u_sys/u_pp/cy0[17][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[54][5]_i_2_n_0                    | u_sys/u_pp/cy0[54][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[27][5]_i_2_n_0                    | u_sys/u_pp/cy0[27][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[41][5]_i_2_n_0                    | u_sys/u_pp/cy0[41][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[47][5]_i_2_n_0                    | u_sys/u_pp/cy0[47][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[22][5]_i_2_n_0                    | u_sys/u_pp/cy0[22][5]_i_1_n_0             |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[15][5]_i_2_n_0                    | u_sys/u_pp/cy0[15][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[35][5]_i_2_n_0                    | u_sys/u_pp/cy0[35][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[36][5]_i_2_n_0                    | u_sys/u_pp/cy0[36][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[1][5]_i_1_n_0                     |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[30][5]_i_2_n_0                    | u_sys/u_pp/cy0[30][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/E[0]                                  | rst_repN_11                               |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[6][5]_i_2_n_0                     | u_sys/u_pp/cy0[6][5]_i_1_n_0              |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[58][5]_i_2_n_0                    | u_sys/u_pp/cy0[58][5]_i_1_n_0             |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[2][5]_i_2_n_0                     | u_sys/u_pp/cy0[2][5]_i_1_n_0              |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[38][5]_i_2_n_0                    | u_sys/u_pp/cy0[38][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[14][5]_i_2_n_0                    | u_sys/u_pp/cy0[14][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[26][5]_i_1_n_0                    |                                           |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[9][5]_i_1_n_0                     |                                           |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[14][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[23][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[9][5]_i_2_n_0                     | u_sys/u_pp/cy0[9][5]_i_1_n_0              |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[16][5]_i_2_n_0                    | u_sys/u_pp/cy0[16][5]_i_1_n_0             |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[13][5]_i_2_n_0                    | u_sys/u_pp/cy0[13][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[11][5]_i_2_n_0                    | u_sys/u_pp/cy0[11][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[16][5]_i_1_n_0                    |                                           |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[20][5]_i_2_n_0                    | u_sys/u_pp/cy0[20][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[21][5]_i_2_n_0                    | u_sys/u_pp/cy0[21][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[1][5]_i_2_n_0                     | u_sys/u_pp/cy0[1][5]_i_1_n_0              |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[8][5]_i_2_n_0                     | u_sys/u_pp/cy0[8][5]_i_1_n_0              |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[12][5]_i_2_n_0                    | u_sys/u_pp/cy0[12][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[48][5]_i_2_n_0                    | u_sys/u_pp/cy0[48][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[7][5]_i_2_n_0                     | u_sys/u_pp/cy0[7][5]_i_1_n_0              |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[59][5]_i_2_n_0                    | u_sys/u_pp/cy0[59][5]_i_1_n_0             |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[56][5]_i_2_n_0                    | u_sys/u_pp/cy0[56][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[25][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[10][5]_i_2_n_0                    | u_sys/u_pp/cy0[10][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[23][5]_i_2_n_0                    | u_sys/u_pp/cy0[23][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[53][5]_i_2_n_0                    | u_sys/u_pp/cy0[53][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[3][5]_i_2_n_0                     | u_sys/u_pp/cy0[3][5]_i_1_n_0              |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_rect/dir_reg_0[0]                   |                                           |                5 |              6 |         1.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[12][5]_i_1_n_0                    |                                           |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[21][5]_i_1_n_0                    |                                           |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/rdata[5]_i_1_n_0                 |                                           |                4 |              6 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tx/ccnt                                  | u_sys/u_tx/shreg                          |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[40][5]_i_2_n_0                    | u_sys/u_pp/cy0[40][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[18][5]_i_2_n_0                    | u_sys/u_pp/cy0[18][5]_i_1_n_0             |                3 |              6 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[57][5]_i_2_n_0                    | u_sys/u_pp/cy0[57][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[44][5]_i_2_n_0                    | u_sys/u_pp/cy0[44][5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[45][5]_i_2_n_0                    | u_sys/u_pp/cy0[45][5]_i_1_n_0             |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[0][5]_i_2_n_0                     | u_sys/u_pp/cy0[0][5]_i_1_n_0              |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy0[5][5]_i_2_n_0                     | u_sys/u_pp/cy0[5][5]_i_1_n_0              |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/E[0]                                | rst_repN_5                                |                2 |              6 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cy1[3][5]_i_1_n_0                     |                                           |                1 |              6 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | u_servo/pc[6]_i_1_n_0                     |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[4][6]_i_2_n_0                   | u_sys/u_pp/cnsel[4][6]_i_1_n_0            |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[53][6]_i_2_n_0                  | u_sys/u_pp/cnsel[53][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[57][6]_i_2_n_0                  | u_sys/u_pp/cnsel[57][6]_i_1_n_0           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[45][6]_i_2_n_0                  | u_sys/u_pp/cnsel[45][6]_i_1_n_0           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[56][6]_i_2_n_0                  | u_sys/u_pp/cnsel[56][6]_i_1_n_0           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[60][6]_i_2_n_0                  | u_sys/u_pp/cnsel[60][6]_i_1_n_0           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[62][6]_i_2_n_0                  | u_sys/u_pp/cnsel[62][6]_i_1_n_0           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/ebits[6]_i_1_n_0                           | rst_repN_8                                |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[8][6]_i_2_n_0                   | u_sys/u_pp/cnsel[8][6]_i_1_n_0            |                7 |              7 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[25][6]_i_2_n_0                    | u_sys/u_pp/cx0[25][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[48][6]_i_2_n_0                  | u_sys/u_pp/cnsel[48][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[49][6]_i_2_n_0                  | u_sys/u_pp/cnsel[49][6]_i_1_n_0           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[46][6]_i_2_n_0                  | u_sys/u_pp/cnsel[46][6]_i_1_n_0           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[11][6]_i_2_n_0                    | u_sys/u_pp/cx0[11][6]_i_1_n_0             |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[2][6]_i_2_n_0                     | u_sys/u_pp/cx0[2][6]_i_1_n_0              |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[14][6]_i_2_n_0                    | u_sys/u_pp/cx0[14][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/rxbuf                                      | rst_repN_14                               |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[29][6]_i_2_n_0                    | u_sys/u_pp/cx0[29][6]_i_1_n_0             |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[18][6]_i_2_n_0                    | u_sys/u_pp/cx0[18][6]_i_1_n_0             |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[22][6]_i_2_n_0                    | u_sys/u_pp/cx0[22][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[12][6]_i_2_n_0                    | u_sys/u_pp/cx0[12][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[20][6]_i_2_n_0                    | u_sys/u_pp/cx0[20][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[1][6]_i_2_n_0                     | u_sys/u_pp/cx0[1][6]_i_1_n_0              |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[31][6]_i_2_n_0                    | u_sys/u_pp/cx0[31][6]_i_1_n_0             |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[13][6]_i_2_n_0                    | u_sys/u_pp/cx0[13][6]_i_1_n_0             |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/wcnt[0][6]_i_1_n_0                         | rst_repN_8                                |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[27][6]_i_2_n_0                    | u_sys/u_pp/cx0[27][6]_i_1_n_0             |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/wcnt[1][6]_i_1_n_0                         | rst_repN_8                                |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[26][6]_i_2_n_0                    | u_sys/u_pp/cx0[26][6]_i_1_n_0             |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[32][6]_i_2_n_0                    | u_sys/u_pp/cx0[32][6]_i_1_n_0             |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[15][6]_i_2_n_0                    | u_sys/u_pp/cx0[15][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[34][6]_i_2_n_0                    | u_sys/u_pp/cx0[34][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/sh_0                           |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/oy[6]_i_1_n_0                 |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/sh_0                           |                                           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/cnt_reg[0][0]                  | rst_repN_11                               |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/cnt_reg[0][1]                  | rst_repN_11                               |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[0][6]_i_2_n_0                     | u_sys/u_pp/cx0[0][6]_i_1_n_0              |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[61][6]_i_1_n_0                    |                                           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[16][6]_i_2_n_0                  | u_sys/u_pp/cnsel[16][6]_i_1_n_0           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[49][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[59][6]_i_1_n_0                    |                                           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[4][6]_i_1_n_0                     |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[53][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[55][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[51][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[6][6]_i_1_n_0                     |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[56][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[60][6]_i_1_n_0                    |                                           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[8][6]_i_1_n_0                     |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[54][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[62][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[63][6]_i_1_n_0                    |                                           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[58][6]_i_1_n_0                    |                                           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[9][6]_i_1_n_0                     |                                           |                6 |              7 |         1.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[52][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[57][6]_i_1_n_0                    |                                           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[7][6]_i_1_n_0                     |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[5][6]_i_1_n_0                     |                                           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[50][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[24][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[16][6]_i_1_n_0                    |                                           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[9][6]_i_2_n_0                     | u_sys/u_pp/cx0[9][6]_i_1_n_0              |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[8][6]_i_2_n_0                     | u_sys/u_pp/cx0[8][6]_i_1_n_0              |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[36][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[2][6]_i_1_n_0                     |                                           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[13][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[10][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[29][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[11][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[39][6]_i_1_n_0                    |                                           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[23][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[21][6]_i_1_n_0                    |                                           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[48][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[17][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[47][6]_i_1_n_0                    |                                           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[15][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[40][6]_i_1_n_0                    |                                           |                6 |              7 |         1.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[35][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[26][6]_i_1_n_0                    |                                           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[46][6]_i_1_n_0                    |                                           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[45][6]_i_1_n_0                    |                                           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[44][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[43][6]_i_1_n_0                    |                                           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[1][6]_i_1_n_0                     |                                           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[41][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[32][6]_i_1_n_0                    |                                           |                6 |              7 |         1.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[19][6]_i_1_n_0                    |                                           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[22][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[28][6]_i_1_n_0                    |                                           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[37][6]_i_1_n_0                    |                                           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[30][6]_i_1_n_0                    |                                           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[27][6]_i_1_n_0                    |                                           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[42][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[18][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[6][6]_i_2_n_0                     | u_sys/u_pp/cx0[6][6]_i_1_n_0              |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[3][6]_i_1_n_0                     |                                           |                6 |              7 |         1.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[12][6]_i_1_n_0                    |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[38][6]_i_1_n_0                    |                                           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[34][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[33][6]_i_1_n_0                    |                                           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[31][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[0][6]_i_1_n_0                     |                                           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[7][6]_i_2_n_0                     | u_sys/u_pp/cx0[7][6]_i_1_n_0              |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[20][6]_i_1_n_0                    |                                           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[25][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx1[14][6]_i_1_n_0                    |                                           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[41][6]_i_2_n_0                    | u_sys/u_pp/cx0[41][6]_i_1_n_0             |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[54][6]_i_2_n_0                    | u_sys/u_pp/cx0[54][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[51][6]_i_2_n_0                    | u_sys/u_pp/cx0[51][6]_i_1_n_0             |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[4][6]_i_2_n_0                     | u_sys/u_pp/cx0[4][6]_i_1_n_0              |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[45][6]_i_2_n_0                    | u_sys/u_pp/cx0[45][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[40][6]_i_2_n_0                    | u_sys/u_pp/cx0[40][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[49][6]_i_2_n_0                    | u_sys/u_pp/cx0[49][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[44][6]_i_2_n_0                    | u_sys/u_pp/cx0[44][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[35][6]_i_2_n_0                    | u_sys/u_pp/cx0[35][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[36][6]_i_2_n_0                    | u_sys/u_pp/cx0[36][6]_i_1_n_0             |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[48][6]_i_2_n_0                    | u_sys/u_pp/cx0[48][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[37][6]_i_2_n_0                    | u_sys/u_pp/cx0[37][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[39][6]_i_2_n_0                    | u_sys/u_pp/cx0[39][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[47][6]_i_2_n_0                    | u_sys/u_pp/cx0[47][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[57][6]_i_2_n_0                    | u_sys/u_pp/cx0[57][6]_i_1_n_0             |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[53][6]_i_2_n_0                    | u_sys/u_pp/cx0[53][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[3][6]_i_2_n_0                     | u_sys/u_pp/cx0[3][6]_i_1_n_0              |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[38][6]_i_2_n_0                    | u_sys/u_pp/cx0[38][6]_i_1_n_0             |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[59][6]_i_2_n_0                    | u_sys/u_pp/cx0[59][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[56][6]_i_2_n_0                    | u_sys/u_pp/cx0[56][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[50][6]_i_2_n_0                    | u_sys/u_pp/cx0[50][6]_i_1_n_0             |                6 |              7 |         1.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[46][6]_i_2_n_0                    | u_sys/u_pp/cx0[46][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[62][6]_i_2_n_0                    | u_sys/u_pp/cx0[62][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[52][6]_i_2_n_0                    | u_sys/u_pp/cx0[52][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[63][6]_i_2_n_0                    | u_sys/u_pp/cx0[63][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[43][6]_i_2_n_0                    | u_sys/u_pp/cx0[43][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[5][6]_i_2_n_0                     | u_sys/u_pp/cx0[5][6]_i_1_n_0              |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[55][6]_i_2_n_0                    | u_sys/u_pp/cx0[55][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[42][6]_i_2_n_0                    | u_sys/u_pp/cx0[42][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[60][6]_i_2_n_0                    | u_sys/u_pp/cx0[60][6]_i_1_n_0             |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[61][6]_i_2_n_0                    | u_sys/u_pp/cx0[61][6]_i_1_n_0             |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[58][6]_i_2_n_0                    | u_sys/u_pp/cx0[58][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[28][6]_i_2_n_0                    | u_sys/u_pp/cx0[28][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[10][6]_i_2_n_0                    | u_sys/u_pp/cx0[10][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[16][6]_i_2_n_0                    | u_sys/u_pp/cx0[16][6]_i_1_n_0             |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[19][6]_i_2_n_0                    | u_sys/u_pp/cx0[19][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[21][6]_i_2_n_0                    | u_sys/u_pp/cx0[21][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[17][6]_i_2_n_0                    | u_sys/u_pp/cx0[17][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_rect/E[0]                           |                                           |                6 |              7 |         1.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[30][6]_i_2_n_0                    | u_sys/u_pp/cx0[30][6]_i_1_n_0             |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[33][6]_i_2_n_0                    | u_sys/u_pp/cx0[33][6]_i_1_n_0             |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/a_zid                                 |                                           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[24][6]_i_2_n_0                    | u_sys/u_pp/cx0[24][6]_i_1_n_0             |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cx0[23][6]_i_2_n_0                    | u_sys/u_pp/cx0[23][6]_i_1_n_0             |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[13][6]_i_2_n_0                  | u_sys/u_pp/cnsel[13][6]_i_1_n_0           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[0][6]_i_2_n_0                   | u_sys/u_pp/cnsel[0][6]_i_1_n_0            |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[15][6]_i_2_n_0                  | u_sys/u_pp/cnsel[15][6]_i_1_n_0           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[17][6]_i_2_n_0                  | u_sys/u_pp/cnsel[17][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[10][6]_i_2_n_0                  | u_sys/u_pp/cnsel[10][6]_i_1_n_0           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[14][6]_i_2_n_0                  | u_sys/u_pp/cnsel[14][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[18][6]_i_2_n_0                  | u_sys/u_pp/cnsel[18][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[11][6]_i_2_n_0                  | u_sys/u_pp/cnsel[11][6]_i_1_n_0           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[12][6]_i_2_n_0                  | u_sys/u_pp/cnsel[12][6]_i_1_n_0           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[35][6]_i_2_n_0                  | u_sys/u_pp/cnsel[35][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[22][6]_i_2_n_0                  | u_sys/u_pp/cnsel[22][6]_i_1_n_0           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[24][6]_i_2_n_0                  | u_sys/u_pp/cnsel[24][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[38][6]_i_2_n_0                  | u_sys/u_pp/cnsel[38][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[2][6]_i_2_n_0                   | u_sys/u_pp/cnsel[2][6]_i_1_n_0            |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[37][6]_i_2_n_0                  | u_sys/u_pp/cnsel[37][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[32][6]_i_2_n_0                  | u_sys/u_pp/cnsel[32][6]_i_1_n_0           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[30][6]_i_2_n_0                  | u_sys/u_pp/cnsel[30][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[3][6]_i_2_n_0                   | u_sys/u_pp/cnsel[3][6]_i_1_n_0            |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[20][6]_i_2_n_0                  | u_sys/u_pp/cnsel[20][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[36][6]_i_2_n_0                  | u_sys/u_pp/cnsel[36][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[40][6]_i_2_n_0                  | u_sys/u_pp/cnsel[40][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[21][6]_i_2_n_0                  | u_sys/u_pp/cnsel[21][6]_i_1_n_0           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[27][6]_i_2_n_0                  | u_sys/u_pp/cnsel[27][6]_i_1_n_0           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[41][6]_i_2_n_0                  | u_sys/u_pp/cnsel[41][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[19][6]_i_2_n_0                  | u_sys/u_pp/cnsel[19][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[25][6]_i_2_n_0                  | u_sys/u_pp/cnsel[25][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[42][6]_i_2_n_0                  | u_sys/u_pp/cnsel[42][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[1][6]_i_2_n_0                   | u_sys/u_pp/cnsel[1][6]_i_1_n_0            |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[26][6]_i_2_n_0                  | u_sys/u_pp/cnsel[26][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[29][6]_i_2_n_0                  | u_sys/u_pp/cnsel[29][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[39][6]_i_2_n_0                  | u_sys/u_pp/cnsel[39][6]_i_1_n_0           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[28][6]_i_2_n_0                  | u_sys/u_pp/cnsel[28][6]_i_1_n_0           |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[31][6]_i_2_n_0                  | u_sys/u_pp/cnsel[31][6]_i_1_n_0           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[23][6]_i_2_n_0                  | u_sys/u_pp/cnsel[23][6]_i_1_n_0           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[33][6]_i_2_n_0                  | u_sys/u_pp/cnsel[33][6]_i_1_n_0           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[34][6]_i_2_n_0                  | u_sys/u_pp/cnsel[34][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[51][6]_i_2_n_0                  | u_sys/u_pp/cnsel[51][6]_i_1_n_0           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[63][6]_i_2_n_0                  | u_sys/u_pp/cnsel[63][6]_i_1_n_0           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[6][6]_i_2_n_0                   | u_sys/u_pp/cnsel[6][6]_i_1_n_0            |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[55][6]_i_2_n_0                  | u_sys/u_pp/cnsel[55][6]_i_1_n_0           |                5 |              7 |         1.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[43][6]_i_2_n_0                  | u_sys/u_pp/cnsel[43][6]_i_1_n_0           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[54][6]_i_2_n_0                  | u_sys/u_pp/cnsel[54][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[7][6]_i_2_n_0                   | u_sys/u_pp/cnsel[7][6]_i_1_n_0            |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[47][6]_i_2_n_0                  | u_sys/u_pp/cnsel[47][6]_i_1_n_0           |                6 |              7 |         1.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[9][6]_i_2_n_0                   | u_sys/u_pp/cnsel[9][6]_i_1_n_0            |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[59][6]_i_2_n_0                  | u_sys/u_pp/cnsel[59][6]_i_1_n_0           |                4 |              7 |         1.75 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[50][6]_i_2_n_0                  | u_sys/u_pp/cnsel[50][6]_i_1_n_0           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[52][6]_i_2_n_0                  | u_sys/u_pp/cnsel[52][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[5][6]_i_2_n_0                   | u_sys/u_pp/cnsel[5][6]_i_1_n_0            |                1 |              7 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[44][6]_i_2_n_0                  | u_sys/u_pp/cnsel[44][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[58][6]_i_2_n_0                  | u_sys/u_pp/cnsel[58][6]_i_1_n_0           |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[61][6]_i_2_n_0                  | u_sys/u_pp/cnsel[61][6]_i_1_n_0           |                3 |              7 |         2.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/byte_data[7]_i_1_n_0           |                                           |                1 |              8 |         8.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1408_1471_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1344_1407_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1600_1663_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pk/tx_data[7]_i_1_n_0                    |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_servo/E[0]                                     | rst_repN_2                                |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/is_root8_out                          |                                           |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pk/cur[7]_i_1__0_n_0                     |                                           |                7 |              8 |         1.14 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/frame_start_reg_0[0]           | rst_repN_2                                |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1536_1599_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1152_1215_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3584_3647_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1024_1087_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3840_3903_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/ecnt[7]_i_1_n_0                            | rst_repN_8                                |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/frame_start_reg_0[1]           | rst_repN_2                                |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1216_1279_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_128_191_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1280_1343_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_0_63_0_2_i_1__1_n_0      |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1088_1151_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/who                                        | rst_repN_8                                |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/who[1][7]_i_1_n_0                          | rst_repN_8                                |                1 |              8 |         8.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/cnt_reg[9]_0[1]                | rst_repN_11                               |                1 |              8 |         8.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/byte_data[7]_i_1__0_n_0        |                                           |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2112_2175_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/cnt_reg[9]_0[0]                | rst_repN_11                               |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tx/shreg                                 |                                           |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_832_895_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_64_127_0_2_i_1__1_n_0    |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_640_703_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_704_767_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_768_831_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_896_959_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/o_pix[12]_i_2_n_0             |                                           |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_576_639_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_960_1023_0_2_i_1__1_n_0  |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_4672_4735_0_2_i_1__0_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_4416_4479_0_2_i_1__0_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_4736_4799_0_2_i_1__0_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_4544_4607_0_2_i_1__0_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_4480_4543_0_2_i_1__0_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_4608_4671_0_2_i_1__0_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_512_575_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_4352_4415_0_2_i_1__0_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_448_511_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_4288_4351_0_2_i_1__0_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3904_3967_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_4096_4159_0_2_i_1__0_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_4224_4287_0_2_i_1__0_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_4032_4095_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_384_447_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1472_1535_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_4160_4223_0_2_i_1__0_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3968_4031_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3648_3711_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3392_3455_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3456_3519_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3776_3839_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3520_3583_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3712_3775_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3328_3391_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3264_3327_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2944_3007_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_320_383_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3200_3263_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3136_3199_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2880_2943_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2816_2879_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3072_3135_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_3008_3071_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2624_2687_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2496_2559_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2432_2495_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2752_2815_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2368_2431_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_256_319_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2560_2623_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2688_2751_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2304_2367_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2240_2303_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2048_2111_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_2176_2239_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_192_255_0_2_i_1__1_n_0   |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1920_1983_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1984_2047_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1856_1919_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1728_1791_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1664_1727_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_km/mem_reg_1792_1855_0_2_i_1__1_n_0 |                                           |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_14                               |                4 |              9 |         2.25 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw[1][95]_i_1_n_0                         | rst_repN_18                               |                3 |              9 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_16                               |                4 |             10 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw                                        | rst_repN_14                               |                3 |             10 |         3.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/bv                             | u_sys/u_tof/u_spi/SR[0]                   |                2 |             10 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_9                                |                6 |             11 |         1.83 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw[1][95]_i_1_n_0                         | rst_repN_14                               |                5 |             11 |         2.20 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw                                        | rst_repN_18                               |                3 |             11 |         3.67 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw                                        | rst_repN_17                               |                4 |             11 |         2.75 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_8                                |                4 |             12 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/rxbuf                                      | rst_repN_6                                |                5 |             12 |         2.40 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_14                               |                4 |             12 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zj[6]_i_1_n_0                         |                                           |                6 |             12 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/rxbuf                                      | rst_repN_18                               |                2 |             12 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/a_done[13]_i_2_n_0                    | u_sys/u_pp/a_done[13]_i_1_n_0             |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[21][12]_i_2_n_0                 | u_sys/u_pp/zarea[21][12]_i_1_n_0          |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cn_waddr[11]_i_1_n_0                  | u_sys/u_pp/cn_wdata[12]_i_1_n_0           |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cn_re_reg_n_0                         |                                           |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_rect/st_reg[3]_rep__1[0]            |                                           |                9 |             13 |         1.44 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/ready6                               | rst_repN_11                               |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/k_area[12]_i_1_n_0                    |                                           |                7 |             13 |         1.86 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[3][12]_i_2_n_0                  | u_sys/u_pp/zarea[3][12]_i_1_n_0           |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cc_min[12]_i_1_n_0                    |                                           |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/lc_raddr[12]_i_1_n_0                  |                                           |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/m01                                   | u_sys/u_pp/cand3[12]_i_1_n_0              |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/mA[12]_i_1_n_0                        |                                           |                2 |             13 |         6.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/o_pix[12]_i_2_n_0             | u_sys/u_core/u_eng/o_pix[12]_i_1_n_0      |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/ra_re_reg_n_0                         |                                           |               10 |             13 |         1.30 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/ra_waddr                              | u_sys/u_pp/ra_wdata[12]_i_1_n_0           |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/wz                                    |                                           |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[10][12]_i_2_n_0                 | u_sys/u_pp/zarea[10][12]_i_1_n_0          |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[11][12]_i_2_n_0                 | u_sys/u_pp/zarea[11][12]_i_1_n_0          |                5 |             13 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[12][12]_i_2_n_0                 | u_sys/u_pp/zarea[12][12]_i_1_n_0          |                7 |             13 |         1.86 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[0][12]_i_2_n_0                  | u_sys/u_pp/zarea[0][12]_i_1_n_0           |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[16][12]_i_2_n_0                 | u_sys/u_pp/zarea[16][12]_i_1_n_0          |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[14][12]_i_2_n_0                 | u_sys/u_pp/zarea[14][12]_i_1_n_0          |                2 |             13 |         6.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[15][12]_i_2_n_0                 | u_sys/u_pp/zarea[15][12]_i_1_n_0          |                5 |             13 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[18][12]_i_2_n_0                 | u_sys/u_pp/zarea[18][12]_i_1_n_0          |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[13][12]_i_2_n_0                 | u_sys/u_pp/zarea[13][12]_i_1_n_0          |                2 |             13 |         6.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[19][12]_i_2_n_0                 | u_sys/u_pp/zarea[19][12]_i_1_n_0          |                6 |             13 |         2.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[17][12]_i_2_n_0                 | u_sys/u_pp/zarea[17][12]_i_1_n_0          |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[1][12]_i_2_n_0                  | u_sys/u_pp/zarea[1][12]_i_1_n_0           |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[23][12]_i_2_n_0                 | u_sys/u_pp/zarea[23][12]_i_1_n_0          |                6 |             13 |         2.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[20][12]_i_2_n_0                 | u_sys/u_pp/zarea[20][12]_i_1_n_0          |                5 |             13 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[22][12]_i_2_n_0                 | u_sys/u_pp/zarea[22][12]_i_1_n_0          |                7 |             13 |         1.86 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[26][12]_i_2_n_0                 | u_sys/u_pp/zarea[26][12]_i_1_n_0          |                5 |             13 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[24][12]_i_2_n_0                 | u_sys/u_pp/zarea[24][12]_i_1_n_0          |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[25][12]_i_2_n_0                 | u_sys/u_pp/zarea[25][12]_i_1_n_0          |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[31][12]_i_2_n_0                 | u_sys/u_pp/zarea[31][12]_i_1_n_0          |               11 |             13 |         1.18 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[2][12]_i_2_n_0                  | u_sys/u_pp/zarea[2][12]_i_1_n_0           |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[33][12]_i_2_n_0                 | u_sys/u_pp/zarea[33][12]_i_1_n_0          |                5 |             13 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[27][12]_i_2_n_0                 | u_sys/u_pp/zarea[27][12]_i_1_n_0          |               11 |             13 |         1.18 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[28][12]_i_2_n_0                 | u_sys/u_pp/zarea[28][12]_i_1_n_0          |                7 |             13 |         1.86 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[34][12]_i_2_n_0                 | u_sys/u_pp/zarea[34][12]_i_1_n_0          |                2 |             13 |         6.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[32][12]_i_2_n_0                 | u_sys/u_pp/zarea[32][12]_i_1_n_0          |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[30][12]_i_2_n_0                 | u_sys/u_pp/zarea[30][12]_i_1_n_0          |                8 |             13 |         1.62 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[35][12]_i_2_n_0                 | u_sys/u_pp/zarea[35][12]_i_1_n_0          |                6 |             13 |         2.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[29][12]_i_2_n_0                 | u_sys/u_pp/zarea[29][12]_i_1_n_0          |                7 |             13 |         1.86 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[45][12]_i_2_n_0                 | u_sys/u_pp/zarea[45][12]_i_1_n_0          |                5 |             13 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[41][12]_i_2_n_0                 | u_sys/u_pp/zarea[41][12]_i_1_n_0          |                2 |             13 |         6.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[44][12]_i_2_n_0                 | u_sys/u_pp/zarea[44][12]_i_1_n_0          |                6 |             13 |         2.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[36][12]_i_2_n_0                 | u_sys/u_pp/zarea[36][12]_i_1_n_0          |                2 |             13 |         6.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[40][12]_i_2_n_0                 | u_sys/u_pp/zarea[40][12]_i_1_n_0          |                9 |             13 |         1.44 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[43][12]_i_2_n_0                 | u_sys/u_pp/zarea[43][12]_i_1_n_0          |                8 |             13 |         1.62 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[37][12]_i_2_n_0                 | u_sys/u_pp/zarea[37][12]_i_1_n_0          |                2 |             13 |         6.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[46][12]_i_2_n_0                 | u_sys/u_pp/zarea[46][12]_i_1_n_0          |                7 |             13 |         1.86 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[48][12]_i_2_n_0                 | u_sys/u_pp/zarea[48][12]_i_1_n_0          |                2 |             13 |         6.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[38][12]_i_2_n_0                 | u_sys/u_pp/zarea[38][12]_i_1_n_0          |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[47][12]_i_2_n_0                 | u_sys/u_pp/zarea[47][12]_i_1_n_0          |                9 |             13 |         1.44 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[39][12]_i_2_n_0                 | u_sys/u_pp/zarea[39][12]_i_1_n_0          |                5 |             13 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[42][12]_i_2_n_0                 | u_sys/u_pp/zarea[42][12]_i_1_n_0          |                6 |             13 |         2.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[58][12]_i_2_n_0                 | u_sys/u_pp/zarea[58][12]_i_1_n_0          |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[51][12]_i_2_n_0                 | u_sys/u_pp/zarea[51][12]_i_1_n_0          |                7 |             13 |         1.86 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[55][12]_i_2_n_0                 | u_sys/u_pp/zarea[55][12]_i_1_n_0          |                6 |             13 |         2.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[56][12]_i_2_n_0                 | u_sys/u_pp/zarea[56][12]_i_1_n_0          |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[50][12]_i_2_n_0                 | u_sys/u_pp/zarea[50][12]_i_1_n_0          |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[52][12]_i_2_n_0                 | u_sys/u_pp/zarea[52][12]_i_1_n_0          |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[57][12]_i_2_n_0                 | u_sys/u_pp/zarea[57][12]_i_1_n_0          |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[53][12]_i_2_n_0                 | u_sys/u_pp/zarea[53][12]_i_1_n_0          |                2 |             13 |         6.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[49][12]_i_2_n_0                 | u_sys/u_pp/zarea[49][12]_i_1_n_0          |                8 |             13 |         1.62 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[59][12]_i_2_n_0                 | u_sys/u_pp/zarea[59][12]_i_1_n_0          |                8 |             13 |         1.62 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[5][12]_i_2_n_0                  | u_sys/u_pp/zarea[5][12]_i_1_n_0           |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[54][12]_i_2_n_0                 | u_sys/u_pp/zarea[54][12]_i_1_n_0          |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[4][12]_i_2_n_0                  | u_sys/u_pp/zarea[4][12]_i_1_n_0           |                6 |             13 |         2.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[8][12]_i_2_n_0                  | u_sys/u_pp/zarea[8][12]_i_1_n_0           |                7 |             13 |         1.86 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[9][12]_i_2_n_0                  | u_sys/u_pp/zarea[9][12]_i_1_n_0           |                8 |             13 |         1.62 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[60][12]_i_2_n_0                 | u_sys/u_pp/zarea[60][12]_i_1_n_0          |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[63][12]_i_2_n_0                 | u_sys/u_pp/zarea[63][12]_i_1_n_0          |               13 |             13 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[61][12]_i_2_n_0                 | u_sys/u_pp/zarea[61][12]_i_1_n_0          |                6 |             13 |         2.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[62][12]_i_2_n_0                 | u_sys/u_pp/zarea[62][12]_i_1_n_0          |                7 |             13 |         1.86 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[6][12]_i_2_n_0                  | u_sys/u_pp/zarea[6][12]_i_1_n_0           |                7 |             13 |         1.86 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zarea[7][12]_i_2_n_0                  | u_sys/u_pp/zarea[7][12]_i_1_n_0           |                8 |             13 |         1.62 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zz_raddr[12]_i_1_n_0                  |                                           |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/c_comp                                |                                           |                5 |             13 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_lc/E[0]                             |                                           |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_lc/st_reg[2]                        |                                           |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_zz/rst_reg                          |                                           |                4 |             13 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/wbuf_reg[0]                    | rst_repN_11                               |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/wbuf_reg_0[0]                  | rst_repN_11                               |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/c_r__0                                |                                           |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/a_r                                   |                                           |                3 |             13 |         4.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/ap[13]_i_2_n_0                        | u_sys/u_pp/ap[13]_i_1_n_0                 |                5 |             14 |         2.80 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw                                        | rst_repN_8                                |                3 |             14 |         4.67 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw                                        | rst_repN_15                               |                3 |             14 |         4.67 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw[1][95]_i_1_n_0                         | rst_repN_8                                |                3 |             14 |         4.67 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/txsh[15]_i_1_n_0                           | rst_repN_8                                |                4 |             15 |         3.75 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw[1][95]_i_1_n_0                         | rst_repN_6                                |                4 |             15 |         3.75 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_2                                |                9 |             15 |         1.67 |
+|  CLK100MHZ_IBUF_BUFG | u_servo/us                                       | rst_repN_10                               |                5 |             15 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/bv                             | u_sys/u_cam/u_spi/cnt                     |                4 |             15 |         3.75 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw                                        | rst_repN_6                                |                2 |             15 |         7.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[53][15]_i_2_n_0                  | u_sys/u_pp/dcam[53][15]_i_1_n_0           |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dj[15]_i_1_n_0                        |                                           |               10 |             16 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[18][12]_i_2_n_0                 | u_sys/u_pp/carea[18][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[51][6]_i_2_n_0                  | u_sys/u_pp/cdist[51][15]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[24][12]_i_2_n_0                 | u_sys/u_pp/carea[24][12]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/kk_cur                                |                                           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_servo/wrap                                     | rst_repN_10                               |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/sample_valid_i_1_n_0                       | rst_repN_8                                |                2 |             16 |         8.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[21][12]_i_2_n_0                 | u_sys/u_pp/carea[21][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[19][12]_i_2_n_0                 | u_sys/u_pp/carea[19][12]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/byte_valid_reg_0               | u_sys/u_cam/u_spi/cnt                     |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/nb3                                   |                                           |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[30][12]_i_2_n_0                 | u_sys/u_pp/carea[30][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[31][12]_i_2_n_0                 | u_sys/u_pp/carea[31][12]_i_1_n_0          |               14 |             16 |         1.14 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/nb2                                   |                                           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/nb1[15]_i_1_n_0                       |                                           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[20][12]_i_2_n_0                 | u_sys/u_pp/carea[20][12]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[29][12]_i_2_n_0                 | u_sys/u_pp/carea[29][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/r_word                                |                                           |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[52][6]_i_2_n_0                  | u_sys/u_pp/cdist[52][15]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[27][6]_i_2_n_0                  | u_sys/u_pp/cdist[27][15]_i_1_n_0          |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[25][12]_i_2_n_0                 | u_sys/u_pp/carea[25][12]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[17][12]_i_2_n_0                 | u_sys/u_pp/carea[17][12]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[5][6]_i_2_n_0                   | u_sys/u_pp/cdist[5][15]_i_1_n_0           |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[28][6]_i_2_n_0                  | u_sys/u_pp/cdist[28][15]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[44][6]_i_2_n_0                  | u_sys/u_pp/cdist[44][15]_i_1_n_0          |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[20][6]_i_2_n_0                  | u_sys/u_pp/cdist[20][15]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[58][6]_i_2_n_0                  | u_sys/u_pp/cdist[58][15]_i_1_n_0          |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[31][6]_i_2_n_0                  | u_sys/u_pp/cdist[31][15]_i_1_n_0          |               10 |             16 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[61][6]_i_2_n_0                  | u_sys/u_pp/cdist[61][15]_i_1_n_0          |               12 |             16 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[41][6]_i_2_n_0                  | u_sys/u_pp/cdist[41][15]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[4][6]_i_2_n_0                   | u_sys/u_pp/cdist[4][15]_i_1_n_0           |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[23][6]_i_2_n_0                  | u_sys/u_pp/cdist[23][15]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[53][6]_i_2_n_0                  | u_sys/u_pp/cdist[53][15]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[30][6]_i_2_n_0                  | u_sys/u_pp/cdist[30][15]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[57][6]_i_2_n_0                  | u_sys/u_pp/cdist[57][15]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[33][6]_i_2_n_0                  | u_sys/u_pp/cdist[33][15]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[45][6]_i_2_n_0                  | u_sys/u_pp/cdist[45][15]_i_1_n_0          |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[19][6]_i_2_n_0                  | u_sys/u_pp/cdist[19][15]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[56][6]_i_2_n_0                  | u_sys/u_pp/cdist[56][15]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[34][6]_i_2_n_0                  | u_sys/u_pp/cdist[34][15]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[60][6]_i_2_n_0                  | u_sys/u_pp/cdist[60][15]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[36][6]_i_2_n_0                  | u_sys/u_pp/cdist[36][15]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[62][6]_i_2_n_0                  | u_sys/u_pp/cdist[62][15]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[8][6]_i_2_n_0                   | u_sys/u_pp/cdist[8][15]_i_1_n_0           |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[25][6]_i_2_n_0                  | u_sys/u_pp/cdist[25][15]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[48][6]_i_2_n_0                  | u_sys/u_pp/cdist[48][15]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[63][6]_i_2_n_0                  | u_sys/u_pp/cdist[63][15]_i_1_n_0          |               11 |             16 |         1.45 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[49][6]_i_2_n_0                  | u_sys/u_pp/cdist[49][15]_i_1_n_0          |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[32][6]_i_2_n_0                  | u_sys/u_pp/cdist[32][15]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[46][6]_i_2_n_0                  | u_sys/u_pp/cdist[46][15]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[6][6]_i_2_n_0                   | u_sys/u_pp/cdist[6][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[42][6]_i_2_n_0                  | u_sys/u_pp/cdist[42][15]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[55][6]_i_2_n_0                  | u_sys/u_pp/cdist[55][15]_i_1_n_0          |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[28][12]_i_2_n_0                 | u_sys/u_pp/carea[28][12]_i_1_n_0          |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[40][6]_i_2_n_0                  | u_sys/u_pp/cdist[40][15]_i_1_n_0          |                3 |             16 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[43][6]_i_2_n_0                  | u_sys/u_pp/cdist[43][15]_i_1_n_0          |                3 |             16 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[1][6]_i_2_n_0                   | u_sys/u_pp/cdist[1][15]_i_1_n_0           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[54][6]_i_2_n_0                  | u_sys/u_pp/cdist[54][15]_i_1_n_0          |               12 |             16 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[3][6]_i_2_n_0                   | u_sys/u_pp/cdist[3][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[7][6]_i_2_n_0                   | u_sys/u_pp/cdist[7][15]_i_1_n_0           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[26][6]_i_2_n_0                  | u_sys/u_pp/cdist[26][15]_i_1_n_0          |                3 |             16 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[47][6]_i_2_n_0                  | u_sys/u_pp/cdist[47][15]_i_1_n_0          |               12 |             16 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[21][6]_i_2_n_0                  | u_sys/u_pp/cdist[21][15]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[9][6]_i_2_n_0                   | u_sys/u_pp/cdist[9][15]_i_1_n_0           |               14 |             16 |         1.14 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[29][6]_i_2_n_0                  | u_sys/u_pp/cdist[29][15]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[59][6]_i_2_n_0                  | u_sys/u_pp/cdist[59][15]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[37][6]_i_2_n_0                  | u_sys/u_pp/cdist[37][15]_i_1_n_0          |                3 |             16 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[2][6]_i_2_n_0                   | u_sys/u_pp/cdist[2][15]_i_1_n_0           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[38][6]_i_2_n_0                  | u_sys/u_pp/cdist[38][15]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[24][6]_i_2_n_0                  | u_sys/u_pp/cdist[24][15]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[22][6]_i_2_n_0                  | u_sys/u_pp/cdist[22][15]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[35][6]_i_2_n_0                  | u_sys/u_pp/cdist[35][15]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[12][6]_i_2_n_0                  | u_sys/u_pp/cdist[12][15]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[11][6]_i_2_n_0                  | u_sys/u_pp/cdist[11][15]_i_1_n_0          |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[18][6]_i_2_n_0                  | u_sys/u_pp/cdist[18][15]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[14][6]_i_2_n_0                  | u_sys/u_pp/cdist[14][15]_i_1_n_0          |                3 |             16 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[10][6]_i_2_n_0                  | u_sys/u_pp/cdist[10][15]_i_1_n_0          |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[17][6]_i_2_n_0                  | u_sys/u_pp/cdist[17][15]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[15][6]_i_2_n_0                  | u_sys/u_pp/cdist[15][15]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[16][6]_i_2_n_0                  | u_sys/u_pp/cdist[16][15]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[0][6]_i_2_n_0                   | u_sys/u_pp/cdist[0][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[13][6]_i_2_n_0                  | u_sys/u_pp/cdist[13][15]_i_1_n_0          |                2 |             16 |         8.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[5][12]_i_2_n_0                  | u_sys/u_pp/carea[5][12]_i_1_n_0           |                3 |             16 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[60][12]_i_2_n_0                 | u_sys/u_pp/carea[60][12]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[58][12]_i_2_n_0                 | u_sys/u_pp/carea[58][12]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[8][12]_i_2_n_0                  | u_sys/u_pp/carea[8][12]_i_1_n_0           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[63][12]_i_2_n_0                 | u_sys/u_pp/carea[63][12]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[22][12]_i_2_n_0                 | u_sys/u_pp/carea[22][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[57][12]_i_2_n_0                 | u_sys/u_pp/carea[57][12]_i_1_n_0          |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[7][12]_i_2_n_0                  | u_sys/u_pp/carea[7][12]_i_1_n_0           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[26][12]_i_2_n_0                 | u_sys/u_pp/carea[26][12]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[12][12]_i_2_n_0                 | u_sys/u_pp/carea[12][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/cnt_reg[3]                     | rst_repN_2                                |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[56][12]_i_2_n_0                 | u_sys/u_pp/carea[56][12]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[59][12]_i_2_n_0                 | u_sys/u_pp/carea[59][12]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/sum                            | u_sys/u_tof/u_spi/SR[0]                   |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[62][12]_i_2_n_0                 | u_sys/u_pp/carea[62][12]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[6][12]_i_2_n_0                  | u_sys/u_pp/carea[6][12]_i_1_n_0           |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[50][6]_i_2_n_0                  | u_sys/u_pp/cdist[50][15]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[0][12]_i_2_n_0                  | u_sys/u_pp/carea[0][12]_i_1_n_0           |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[11][12]_i_2_n_0                 | u_sys/u_pp/carea[11][12]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[9][12]_i_2_n_0                  | u_sys/u_pp/carea[9][12]_i_1_n_0           |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[61][12]_i_2_n_0                 | u_sys/u_pp/carea[61][12]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[50][12]_i_2_n_0                 | u_sys/u_pp/carea[50][12]_i_1_n_0          |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[13][12]_i_2_n_0                 | u_sys/u_pp/carea[13][12]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[14][12]_i_2_n_0                 | u_sys/u_pp/carea[14][12]_i_1_n_0          |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[10][12]_i_2_n_0                 | u_sys/u_pp/carea[10][12]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[43][12]_i_2_n_0                 | u_sys/u_pp/carea[43][12]_i_1_n_0          |               10 |             16 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[37][12]_i_2_n_0                 | u_sys/u_pp/carea[37][12]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[44][12]_i_2_n_0                 | u_sys/u_pp/carea[44][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[36][12]_i_2_n_0                 | u_sys/u_pp/carea[36][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[48][12]_i_2_n_0                 | u_sys/u_pp/carea[48][12]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pk/sum[15]_i_1__0_n_0                    |                                           |                3 |             16 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[40][12]_i_2_n_0                 | u_sys/u_pp/carea[40][12]_i_1_n_0          |               10 |             16 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[54][12]_i_2_n_0                 | u_sys/u_pp/carea[54][12]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[4][12]_i_2_n_0                  | u_sys/u_pp/carea[4][12]_i_1_n_0           |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[49][12]_i_2_n_0                 | u_sys/u_pp/carea[49][12]_i_1_n_0          |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[46][12]_i_2_n_0                 | u_sys/u_pp/carea[46][12]_i_1_n_0          |               11 |             16 |         1.45 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[39][12]_i_2_n_0                 | u_sys/u_pp/carea[39][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[41][12]_i_2_n_0                 | u_sys/u_pp/carea[41][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[33][12]_i_2_n_0                 | u_sys/u_pp/carea[33][12]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[34][12]_i_2_n_0                 | u_sys/u_pp/carea[34][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[47][12]_i_2_n_0                 | u_sys/u_pp/carea[47][12]_i_1_n_0          |               13 |             16 |         1.23 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[45][12]_i_2_n_0                 | u_sys/u_pp/carea[45][12]_i_1_n_0          |               11 |             16 |         1.45 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[3][12]_i_2_n_0                  | u_sys/u_pp/carea[3][12]_i_1_n_0           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[38][12]_i_2_n_0                 | u_sys/u_pp/carea[38][12]_i_1_n_0          |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cnsel[39][6]_i_2_n_0                  | u_sys/u_pp/cdist[39][15]_i_1_n_0          |                3 |             16 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[55][12]_i_2_n_0                 | u_sys/u_pp/carea[55][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[42][12]_i_2_n_0                 | u_sys/u_pp/carea[42][12]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[53][12]_i_2_n_0                 | u_sys/u_pp/carea[53][12]_i_1_n_0          |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[35][12]_i_2_n_0                 | u_sys/u_pp/carea[35][12]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[52][12]_i_2_n_0                 | u_sys/u_pp/carea[52][12]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[51][12]_i_2_n_0                 | u_sys/u_pp/carea[51][12]_i_1_n_0          |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[1][12]_i_2_n_0                  | u_sys/u_pp/carea[1][12]_i_1_n_0           |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[32][12]_i_2_n_0                 | u_sys/u_pp/carea[32][12]_i_1_n_0          |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[16][12]_i_2_n_0                 | u_sys/u_pp/carea[16][12]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[23][12]_i_2_n_0                 | u_sys/u_pp/carea[23][12]_i_1_n_0          |               10 |             16 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[2][12]_i_2_n_0                  | u_sys/u_pp/carea[2][12]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[27][12]_i_2_n_0                 | u_sys/u_pp/carea[27][12]_i_1_n_0          |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dbest[15]_i_2_n_0                     | u_sys/u_pp/dbest[15]_i_1_n_0              |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[0][15]_i_2_n_0                   | u_sys/u_pp/dcam[0][15]_i_1_n_0            |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[18][15]_i_2_n_0                  | u_sys/u_pp/dcam[18][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[20][15]_i_2_n_0                  | u_sys/u_pp/dcam[20][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[12][15]_i_2_n_0                  | u_sys/u_pp/dcam[12][15]_i_1_n_0           |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[1][15]_i_2_n_0                   | u_sys/u_pp/dcam[1][15]_i_1_n_0            |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[19][15]_i_2_n_0                  | u_sys/u_pp/dcam[19][15]_i_1_n_0           |               12 |             16 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[17][15]_i_2_n_0                  | u_sys/u_pp/dcam[17][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[13][15]_i_2_n_0                  | u_sys/u_pp/dcam[13][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[10][15]_i_2_n_0                  | u_sys/u_pp/dcam[10][15]_i_1_n_0           |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[15][15]_i_2_n_0                  | u_sys/u_pp/dcam[15][15]_i_1_n_0           |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[21][15]_i_2_n_0                  | u_sys/u_pp/dcam[21][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[23][15]_i_2_n_0                  | u_sys/u_pp/dcam[23][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[14][15]_i_2_n_0                  | u_sys/u_pp/dcam[14][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[22][15]_i_2_n_0                  | u_sys/u_pp/dcam[22][15]_i_1_n_0           |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[28][15]_i_2_n_0                  | u_sys/u_pp/dcam[28][15]_i_1_n_0           |               11 |             16 |         1.45 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[25][15]_i_2_n_0                  | u_sys/u_pp/dcam[25][15]_i_1_n_0           |               10 |             16 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[27][15]_i_2_n_0                  | u_sys/u_pp/dcam[27][15]_i_1_n_0           |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[11][15]_i_2_n_0                  | u_sys/u_pp/dcam[11][15]_i_1_n_0           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[26][15]_i_2_n_0                  | u_sys/u_pp/dcam[26][15]_i_1_n_0           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[29][15]_i_2_n_0                  | u_sys/u_pp/dcam[29][15]_i_1_n_0           |               11 |             16 |         1.45 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[24][15]_i_2_n_0                  | u_sys/u_pp/dcam[24][15]_i_1_n_0           |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[16][15]_i_2_n_0                  | u_sys/u_pp/dcam[16][15]_i_1_n_0           |               10 |             16 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[43][15]_i_2_n_0                  | u_sys/u_pp/dcam[43][15]_i_1_n_0           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[37][15]_i_2_n_0                  | u_sys/u_pp/dcam[37][15]_i_1_n_0           |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[39][15]_i_2_n_0                  | u_sys/u_pp/dcam[39][15]_i_1_n_0           |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[42][15]_i_2_n_0                  | u_sys/u_pp/dcam[42][15]_i_1_n_0           |                3 |             16 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[48][15]_i_2_n_0                  | u_sys/u_pp/dcam[48][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[36][15]_i_2_n_0                  | u_sys/u_pp/dcam[36][15]_i_1_n_0           |                3 |             16 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[33][15]_i_2_n_0                  | u_sys/u_pp/dcam[33][15]_i_1_n_0           |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[3][15]_i_2_n_0                   | u_sys/u_pp/dcam[3][15]_i_1_n_0            |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[38][15]_i_2_n_0                  | u_sys/u_pp/dcam[38][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[41][15]_i_2_n_0                  | u_sys/u_pp/dcam[41][15]_i_1_n_0           |                3 |             16 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[44][15]_i_2_n_0                  | u_sys/u_pp/dcam[44][15]_i_1_n_0           |               13 |             16 |         1.23 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[32][15]_i_2_n_0                  | u_sys/u_pp/dcam[32][15]_i_1_n_0           |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[34][15]_i_2_n_0                  | u_sys/u_pp/dcam[34][15]_i_1_n_0           |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[30][15]_i_2_n_0                  | u_sys/u_pp/dcam[30][15]_i_1_n_0           |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[2][15]_i_2_n_0                   | u_sys/u_pp/dcam[2][15]_i_1_n_0            |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[35][15]_i_2_n_0                  | u_sys/u_pp/dcam[35][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[31][15]_i_2_n_0                  | u_sys/u_pp/dcam[31][15]_i_1_n_0           |               10 |             16 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[45][15]_i_2_n_0                  | u_sys/u_pp/dcam[45][15]_i_1_n_0           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[46][15]_i_2_n_0                  | u_sys/u_pp/dcam[46][15]_i_1_n_0           |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[47][15]_i_2_n_0                  | u_sys/u_pp/dcam[47][15]_i_1_n_0           |               12 |             16 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[40][15]_i_2_n_0                  | u_sys/u_pp/dcam[40][15]_i_1_n_0           |                5 |             16 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[57][15]_i_2_n_0                  | u_sys/u_pp/dcam[57][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[52][15]_i_2_n_0                  | u_sys/u_pp/dcam[52][15]_i_1_n_0           |               10 |             16 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[7][15]_i_2_n_0                   | u_sys/u_pp/dcam[7][15]_i_1_n_0            |                8 |             16 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[54][15]_i_2_n_0                  | u_sys/u_pp/dcam[54][15]_i_1_n_0           |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[58][15]_i_2_n_0                  | u_sys/u_pp/dcam[58][15]_i_1_n_0           |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[50][15]_i_2_n_0                  | u_sys/u_pp/dcam[50][15]_i_1_n_0           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/carea[15][12]_i_2_n_0                 | u_sys/u_pp/carea[15][12]_i_1_n_0          |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[60][15]_i_2_n_0                  | u_sys/u_pp/dcam[60][15]_i_1_n_0           |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[4][15]_i_2_n_0                   | u_sys/u_pp/dcam[4][15]_i_1_n_0            |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[56][15]_i_2_n_0                  | u_sys/u_pp/dcam[56][15]_i_1_n_0           |                7 |             16 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[51][15]_i_2_n_0                  | u_sys/u_pp/dcam[51][15]_i_1_n_0           |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[49][15]_i_2_n_0                  | u_sys/u_pp/dcam[49][15]_i_1_n_0           |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[5][15]_i_2_n_0                   | u_sys/u_pp/dcam[5][15]_i_1_n_0            |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[6][15]_i_2_n_0                   | u_sys/u_pp/dcam[6][15]_i_1_n_0            |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[9][15]_i_2_n_0                   | u_sys/u_pp/dcam[9][15]_i_1_n_0            |               13 |             16 |         1.23 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[55][15]_i_2_n_0                  | u_sys/u_pp/dcam[55][15]_i_1_n_0           |                6 |             16 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/sum                                  | rst_repN_18                               |                2 |             16 |         8.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[61][15]_i_2_n_0                  | u_sys/u_pp/dcam[61][15]_i_1_n_0           |                9 |             16 |         1.78 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[62][15]_i_2_n_0                  | u_sys/u_pp/dcam[62][15]_i_1_n_0           |               10 |             16 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[63][15]_i_2_n_0                  | u_sys/u_pp/dcam[63][15]_i_1_n_0           |               11 |             16 |         1.45 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[8][15]_i_2_n_0                   | u_sys/u_pp/dcam[8][15]_i_1_n_0            |               15 |             16 |         1.07 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/cnt_reg[9]                     | rst_repN_18                               |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dcam[59][15]_i_2_n_0                  | u_sys/u_pp/dcam[59][15]_i_1_n_0           |               10 |             16 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/kx[1]_i_1_n_0                 |                                           |                7 |             17 |         2.43 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/rxbuf                                      | rst_repN_15                               |                4 |             17 |         4.25 |
+|  CLK100MHZ_IBUF_BUFG | sel                                              | clear                                     |                5 |             17 |         3.40 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw[1][95]_i_1_n_0                         | rst_repN_15                               |                6 |             17 |         2.83 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | u_sys/u_core/u_eng/x10_reg[6][7]_i_1_n_3  |                7 |             18 |         2.57 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3712_3775_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3776_3839_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3648_3711_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3392_3455_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/st[5]_i_1_n_0                         | rst_repN_4                                |                9 |             18 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3328_3391_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3584_3647_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3456_3519_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3520_3583_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3200_3263_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3264_3327_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3136_3199_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_320_383_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2944_3007_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2816_2879_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3072_3135_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3008_3071_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2880_2943_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_256_319_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2688_2751_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2624_2687_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2752_2815_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2304_2367_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2496_2559_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2560_2623_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2368_2431_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | u_sys/u_core/u_eng/x10_reg[7][7]_i_1_n_3  |                9 |             18 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3712_3775_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | u_sys/u_core/u_eng/x10_reg[5][7]_i_1_n_3  |               11 |             18 |         1.64 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | u_sys/u_core/u_eng/x10_reg[4][7]_i_1_n_3  |                8 |             18 |         2.25 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | u_sys/u_core/u_eng/x10_reg[3][7]_i_1_n_3  |               11 |             18 |         1.64 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | u_sys/u_core/u_eng/x10_reg[2][7]_i_1_n_3  |                7 |             18 |         2.57 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | u_sys/u_core/u_eng/x10_reg[1][7]_i_1_n_3  |               10 |             18 |         1.80 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | u_sys/u_core/u_eng/x10_reg[0][7]_i_1_n_3  |                7 |             18 |         2.57 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2432_2495_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2176_2239_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2048_2111_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2240_2303_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_2112_2175_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1728_1791_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_rect/st_reg[0]_0                    |                                           |                9 |             18 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_832_895_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_960_1023_0_2_i_1__0_n_0  |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_768_831_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_896_959_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_64_127_0_2_i_1__0_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_640_703_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_576_639_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_512_575_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_704_767_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_4032_4095_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3968_4031_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_448_511_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3904_3967_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3840_3903_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1664_1727_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_384_447_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3648_3711_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3776_3839_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3584_3647_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3456_3519_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3392_3455_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3520_3583_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3136_3199_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3264_3327_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3200_3263_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_320_383_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3328_3391_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3008_3071_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_3072_3135_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2944_3007_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2880_2943_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2816_2879_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1408_1471_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1600_1663_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2624_2687_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1536_1599_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2688_2751_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2752_2815_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_256_319_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2304_2367_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2560_2623_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2368_2431_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2496_2559_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1664_1727_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1472_1535_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1472_1535_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_128_191_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1280_1343_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1216_1279_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1344_1407_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1152_1215_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1024_1087_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1088_1151_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_0_63_0_2_i_1_n_0         |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_192_255_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2432_2495_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2240_2303_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1856_1919_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1984_2047_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2112_2175_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2176_2239_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_2048_2111_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1792_1855_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1792_1855_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1920_1983_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1984_2047_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1856_1919_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_192_255_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1536_1599_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_1920_1983_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1600_1663_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_512_575_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1728_1791_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_128_191_0_2_i_1__0_n_0   |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1344_1407_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1280_1343_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1408_1471_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1152_1215_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1088_1151_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1024_1087_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_1216_1279_0_2_i_1__0_n_0 |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_cn/mem_reg_0_63_0_2_i_1__0_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_960_1023_0_2_i_1_n_0     |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_896_959_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_640_703_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_704_767_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_768_831_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_832_895_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_64_127_0_2_i_1_n_0       |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_4672_4735_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_576_639_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_4736_4799_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_448_511_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_4480_4543_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_4416_4479_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_4544_4607_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_4608_4671_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_4160_4223_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_4288_4351_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_4352_4415_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_4224_4287_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_4096_4159_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3968_4031_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_384_447_0_2_i_1_n_0      |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_4032_4095_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3904_3967_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_ra/mem_reg_3840_3903_0_2_i_1_n_0    |                                           |                5 |             18 |         3.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/ssum[18]_i_2_n_0                      | u_sys/u_pp/ssum[18]_i_1_n_0               |                5 |             19 |         3.80 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | u_imu/tcnt[0]_i_1_n_0                     |                5 |             20 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zz_i[6]_i_2_n_0                       | u_sys/u_pp/zz_i[6]_i_1_n_0                |                7 |             20 |         2.86 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pk/idx[14]_i_2_n_0                       | u_sys/u_pk/idx[14]_i_1_n_0                |               19 |             20 |         1.05 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw                                        | rst_repN_16                               |                4 |             21 |         5.25 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/rxbuf                                      | rst_repN_16                               |                3 |             21 |         7.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/a_rnd[13]_i_1_n_0             |                                           |                7 |             21 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/o_grp_base[13]_i_1_n_0        |                                           |               10 |             23 |         2.30 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_zz/rst_reg                          | u_sys/u_pp/u_zz/rst_reg_0                 |                5 |             23 |         4.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/u_spi/E[0]                           |                                           |                8 |             24 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/wsum                                  | u_sys/u_pp/nsel_c[6]_i_1_n_0              |                6 |             24 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zdc1_i_1_n_0                          |                                           |               13 |             24 |         1.85 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/raw[1][95]_i_1_n_0                         | rst_repN_16                               |                4 |             24 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/rc_addr[10]_i_1_n_0                   |                                           |               11 |             25 |         2.27 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/sample_valid_i_1_n_0                       | rst_repN_17                               |                6 |             25 |         4.17 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/m01                                   |                                           |                9 |             26 |         2.89 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_18                               |                8 |             26 |         3.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/dsh                                  | rst_repN_18                               |                7 |             26 |         3.71 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/k_x0[6]_i_1_n_0                       |                                           |               16 |             26 |         1.62 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dv_q[12]_i_2_n_0                      | u_sys/u_pp/dv_q[12]_i_1_n_0               |                7 |             26 |         3.71 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dv_d[12]_i_1_n_0                      |                                           |               10 |             26 |         2.60 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/rc_re_reg_n_0                         |                                           |               26 |             27 |         1.04 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_17                               |                7 |             27 |         3.86 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_rect/st_reg[0]_1[0]                 |                                           |               10 |             29 |         2.90 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/lc_wdata[15]_i_1_n_0                  |                                           |                9 |             29 |         3.22 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/best[5]_i_1_n_0                       |                                           |               10 |             30 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/dz                                    |                                           |               12 |             30 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/dsh                                  | rst_repN_14                               |                6 |             32 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/zge                                   |                                           |               12 |             32 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cycles[0]_i_1__0_n_0                  |                                           |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pk/obj_k[5]_i_1_n_0                      |                                           |               16 |             32 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/cycles[0]_i_1_n_0                   |                                           |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_4                                |               11 |             33 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/sample_valid_i_1_n_0                       | rst_repN_15                               |                6 |             33 |         5.50 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/sample_valid_i_1_n_0                       | rst_repN_14                               |                7 |             36 |         5.14 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cn_waddr[11]_i_1_n_0                  |                                           |               14 |             36 |         2.57 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/rxbuf                                      | rst_repN_8                                |                8 |             37 |         4.62 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/dsh                                  | rst_repN_15                               |               10 |             40 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/sample_valid_i_1_n_0                       | rst_repN_18                               |                8 |             42 |         5.25 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/sample_valid_i_1_n_0                       | rst_repN_16                               |                8 |             42 |         5.25 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/ra_waddr                              |                                           |               14 |             43 |         3.07 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/hsh                                  | rst_repN_10                               |                8 |             44 |         5.50 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cz                                    |                                           |               12 |             44 |         3.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/dsh                                  | rst_repN_6                                |                9 |             44 |         4.89 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/t20                                   |                                           |               12 |             45 |         3.75 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/sample_valid_i_1_n_0                       | rst_repN_6                                |                9 |             48 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/dsh                                  | rst_repN_17                               |               11 |             54 |         4.91 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_19                               |               30 |             55 |         1.83 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_8                                |               18 |             59 |         3.28 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_5                                |               20 |             59 |         2.95 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/cn_raddr[11]_i_1_n_0                  |                                           |               20 |             60 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_13                               |               29 |             62 |         2.14 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/desc[cout][4]_i_1_n_0               |                                           |               16 |             62 |         3.88 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_5                                |               27 |             64 |         2.37 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_ipk/hsh                                  | rst_repN_14                               |               13 |             66 |         5.08 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_pp/u_lc/rst_reg                          |                                           |               24 |             69 |         2.88 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_11                               |               25 |             70 |         2.80 |
+|  CLK100MHZ_IBUF_BUFG |                                                  | rst_repN_4                                |               32 |             70 |         2.19 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_10                               |               38 |             89 |         2.34 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_2                                |               40 |            116 |         2.90 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_1                                |               49 |            118 |         2.41 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN                                  |               62 |            191 |         3.08 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_9                                |               68 |            197 |         2.90 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_12                               |               73 |            208 |         2.85 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       | u_sys/u_core/u_eng/rst_reg                |               59 |            208 |         3.53 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/E[0]                           | rst_repN_7                                |               89 |            243 |         2.73 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/v17                           |                                           |               88 |            252 |         2.86 |
+|  CLK100MHZ_IBUF_BUFG | u_imu/sample_valid_reg_0                         |                                           |               35 |            280 |         8.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/rst_reg                       |                                           |              190 |            308 |         1.62 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/v12                           |                                           |              129 |            512 |         3.97 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/rst_reg[0]                     |                                           |              169 |            512 |         3.03 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/E[0]                          |                                           |              159 |            522 |         3.28 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/v14                           |                                           |              215 |            768 |         3.57 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/v15                           |                                           |              192 |            768 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_core/u_eng/v16                           |                                           |              288 |            768 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_tof/u_spi/rst_reg_0[0]                   |                                           |              298 |           1024 |         3.44 |
+|  CLK100MHZ_IBUF_BUFG | u_sys/u_cam/E[0]                                 |                                           |              602 |           1554 |         2.58 |
+|  CLK100MHZ_IBUF_BUFG |                                                  |                                           |             1161 |           3737 |         3.22 |
++----------------------+--------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+
+

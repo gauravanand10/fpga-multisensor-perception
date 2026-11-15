@@ -1,0 +1,30 @@
+Nexys4 DDR U-Net + IMU + servo build  (Sat Nov 14 14:54:27 +0530 2026)
+part xc7a100tcsg324-1, clock 100 MHz (10.000 ns)
+setup WNS = 0.128 ns   hold WHS = 0.013 ns   failing setup endpoints = 0
+TIMING MET
+| Slice LUTs                 | 27232 |     0 |          0 |     63400 | 42.95 |
+| Slice Registers            | 22036 |     0 |          0 |    126800 | 17.38 |
+| Block RAM Tile    | 122.5 |     0 |          0 |       135 | 90.74 |
+| DSPs           |   44 |     0 |          0 |       240 | 18.33 |
+| Bonded IOB                  |   41 |    41 |          0 |       210 | 19.52 |
+| Total On-Chip Power (W)  | 0.225        |
+| Dynamic (W)              | 0.121        |
+| Device Static (W)        | 0.103        |
+worst path per module:
+  U-Net engine       worst slack    0.128 ns   u_sys/u_core/u_eng/v15_reg/C -> u_sys/u_core/u_eng/pr16_reg[10][28]/CE
+  U-Net memories     worst slack    1.206 ns   u_sys/u_core/u_eng/busy_reg/C -> u_sys/u_core/g_bank[7].u_ram/g_piece[2].mem_reg/ADDRBWRADDR[12]
+  weight ROM         worst slack    2.384 ns   u_sys/u_core/u_eng/wt_raddr_reg[7]__0_rep__0/C -> u_sys/u_core/u_wrom/q_reg_34/ADDRARDADDR[11]
+  U-Net sequencer    worst slack    0.128 ns   u_sys/u_core/u_eng/v15_reg/C -> u_sys/u_core/u_eng/pr16_reg[10][28]/CE
+  post-processing    worst slack    1.043 ns   u_sys/u_pp/zi_reg[2]_rep__1/C -> u_sys/u_pp/zs_reg[2]/D
+  camera SPI rx      worst slack    1.569 ns   u_sys/u_cam/cur_buf_reg/C -> u_sys/u_cam/u_fb/g_piece[6].mem_reg/ENBWREN
+  ToF SPI rx         worst slack    1.655 ns   u_sys/u_tof/rx_sum_reg[5]/C -> u_sys/u_tof/dist_mm_reg[538]/CE
+  UART packer        worst slack    0.585 ns   u_sys/u_pk/obj_k_reg[1]_rep__7/C -> u_sys/u_pk/cur_reg[5]/D
+  UART tx            worst slack    6.636 ns   rst_reg_replica_5/C -> u_sys/u_tx/bitn_reg[0]/CE
+  IMU FIFO           worst slack    4.370 ns   u_sys/u_ififo/count_reg[3]/C -> u_sys/u_ififo/mem_reg_0_31_180_185/RAMA/WE
+  IMU packer         worst slack    3.232 ns   u_sys/u_ipk/FSM_sequential_ps_reg[1]/C -> u_sys/u_ipk/dsh_reg[88]/CE
+  UART arbiter       worst slack    6.470 ns   u_sys/u_ififo/count_reg[1]/C -> u_sys/u_arb/imu_start_reg/D
+  IMU SPI            worst slack    2.369 ns   u_imu/FSM_sequential_qs_reg[1]/C -> u_imu/sample_reg[30]/CE
+  servo PWM          worst slack    4.397 ns   u_servo/target_us_reg[1]/C -> u_servo/now_us_reg[6]/D
+  servo control      worst slack    4.832 ns   sw_s1_reg[1]/C -> u_sctl/swp_reg[0]/CE
+  system control     worst slack    0.128 ns   u_sys/u_core/u_eng/v15_reg/C -> u_sys/u_core/u_eng/pr16_reg[10][28]/CE
+bitstream: hw/vivado/bitstream/fpga_perception_system.bit
