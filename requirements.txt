@@ -1,0 +1,5 @@
+# Python 3.10+ (tested with the project venv: Python 3.14)
+numpy
+opencv-python
+onnxruntime      # float reference model (the original PC system)
+matplotlib       # figures only
