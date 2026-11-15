@@ -1,0 +1,33 @@
+End-to-end reference model: ESP32 -> SPI -> FPGA -> UART -> laptop
+
+scenes: 8 COCO 2017 validation photos, ToF frames simulated from the true layout
+
+  scene_01_person                          CAM1 19208 B, TOF1 200 B, UART 24225 B, float/int8 agreement 99.9 %
+  scene_02_chair                           CAM1 19208 B, TOF1 200 B, UART 24225 B, float/int8 agreement 99.4 %
+  scene_03_tv_laptop_bottle                CAM1 19208 B, TOF1 200 B, UART 24249 B, float/int8 agreement 99.6 %
+  scene_04_person_tv                       CAM1 19208 B, TOF1 200 B, UART 24237 B, float/int8 agreement 99.3 %
+  scene_05_person_bottle                   CAM1 19208 B, TOF1 200 B, UART 24237 B, float/int8 agreement 99.3 %
+  scene_06_person_tv                       CAM1 19208 B, TOF1 200 B, UART 24261 B, float/int8 agreement 99.1 %
+  scene_07_person_bottle                   CAM1 19208 B, TOF1 200 B, UART 24249 B, float/int8 agreement 97.0 %
+  scene_08_person_laptop                   CAM1 19208 B, TOF1 200 B, UART 24237 B, float/int8 agreement 99.5 %
+
+object distances (18 objects with a distance, 0 without):
+  median |error| 4 mm, mean |error| 72 mm, within 5 %: 94 %, within 10 %: 94 %
+
+FPGA receivers, damaged packets:
+  camera packet, 1 bit flipped             -> rejected (checksum)
+  camera packet, last 100 bytes missing    -> rejected (length 19108 != 19208)
+  camera packet, wrong magic               -> rejected (bad magic)
+  ToF packet, 1 byte changed               -> rejected (checksum)
+  ToF packet, truncated                    -> rejected (length 120 != 200)
+  camera packet, intact                    -> accepted
+  ToF packet, intact                       -> accepted
+
+per-frame time budget (not measured on hardware):
+  ESP32-CAM -> FPGA, SPI 8 MHz, 19 208 B                    19.21 ms   [link rate]
+  ToF ESP32 -> FPGA, SPI 4 MHz, 200 B (every 100 ms)         0.40 ms   [link rate]
+  U-Net accelerator, 1 327 877 cycles @ 100 MHz             13.28 ms   [RTL simulation]
+  Objects + distance, 0.22-0.52 M cycles                     5.18 ms   [RTL simulation (max)]
+  FPGA -> laptop, UART 2 Mbaud, with image (~24.2 KB)      121.25 ms   [link rate]
+  FPGA -> laptop, UART 2 Mbaud, no image (~5.0 KB)          25.25 ms   [link rate]
+  frame-rate limit: 8.2 fps with the camera image in the packet, 39.6 fps without (UART/SPI bound; ESP32-CAM capture rate not modelled)

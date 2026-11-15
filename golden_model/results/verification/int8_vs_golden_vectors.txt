@@ -1,0 +1,18 @@
+int8 U-Net model vs fpga_ref golden vectors (golden test frame)
+
+  L000_Conv  -> L001_Relu_out0    16 x 60 x  80    76800 values  mismatches 0
+  L002_Conv  -> L003_Relu_out0    16 x 60 x  80    76800 values  mismatches 0
+  L004_Conv  -> L005_Relu_out0    32 x 30 x  40    38400 values  mismatches 0
+  L006_Conv  -> L007_Relu_out0    32 x 30 x  40    38400 values  mismatches 0
+  L008_Conv  -> L009_Relu_out0    80 x 15 x  20    24000 values  mismatches 0
+  L010_Conv  -> L011_Relu_out0    80 x 15 x  20    24000 values  mismatches 0
+  L012_Conv  -> L013_Relu_out0    80 x 15 x  20    24000 values  mismatches 0
+  L016_Conv  -> L017_Relu_out0    32 x 30 x  40    38400 values  mismatches 0
+  L018_Conv  -> L019_Relu_out0    32 x 30 x  40    38400 values  mismatches 0
+  L022_Conv  -> L023_Relu_out0    16 x 60 x  80    76800 values  mismatches 0
+  L024_Conv  -> L025_Relu_out0    16 x 60 x  80    76800 values  mismatches 0
+  L026_Conv  -> L026_Conv_out0     6 x 60 x  80    28800 values  mismatches 0
+
+  label map 80x60 vs argmax(golden logits): mismatches 0
+
+PASS: 12/12 layers bit-exact

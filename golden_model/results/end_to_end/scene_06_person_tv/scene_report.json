@@ -1,0 +1,83 @@
+{
+ "scene": "scene_06_person_tv",
+ "coco_val_index": 895,
+ "classes_present": [
+  "person",
+  "tv"
+ ],
+ "spi_camera_packet_bytes": 19208,
+ "spi_tof_packet_bytes": 200,
+ "camera_packet_accepted": true,
+ "tof_packet_accepted": true,
+ "tof_valid_zones": 60,
+ "label_agreement_float_vs_int8": 0.9910416666666667,
+ "uart_packet_bytes": 24261,
+ "uart_time_ms": 121.30499999999999,
+ "laptop_packet_checksum_ok": true,
+ "objects": [
+  {
+   "id": 1,
+   "cls": "tv",
+   "area_px": 340,
+   "box_80x60": [
+    44,
+    14,
+    63,
+    32
+   ],
+   "fpga_distance_mm": 1560,
+   "zones_used": 5,
+   "true_depth_mm": 1562,
+   "true_class": "tv",
+   "error_mm": -2
+  },
+  {
+   "id": 2,
+   "cls": "person",
+   "area_px": 567,
+   "box_80x60": [
+    0,
+    23,
+    19,
+    59
+   ],
+   "fpga_distance_mm": 2490,
+   "zones_used": 7,
+   "true_depth_mm": 2494,
+   "true_class": "person",
+   "error_mm": -4
+  },
+  {
+   "id": 3,
+   "cls": "person",
+   "area_px": 304,
+   "box_80x60": [
+    35,
+    34,
+    51,
+    59
+   ],
+   "fpga_distance_mm": 2003,
+   "zones_used": 6,
+   "true_depth_mm": 2011,
+   "true_class": "person",
+   "error_mm": -8
+  },
+  {
+   "id": 4,
+   "cls": "person",
+   "area_px": 278,
+   "box_80x60": [
+    61,
+    36,
+    78,
+    59
+   ],
+   "fpga_distance_mm": 1689,
+   "zones_used": 4,
+   "true_depth_mm": 1698,
+   "true_class": "person",
+   "error_mm": -9
+  }
+ ]
+}

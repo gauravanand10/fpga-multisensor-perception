@@ -1,0 +1,78 @@
+{
+ "layers": [
+  {
+   "layer": "L000_Conv",
+   "tensor": "L001_Relu_out0",
+   "values": 76800,
+   "mismatches": 0
+  },
+  {
+   "layer": "L002_Conv",
+   "tensor": "L003_Relu_out0",
+   "values": 76800,
+   "mismatches": 0
+  },
+  {
+   "layer": "L004_Conv",
+   "tensor": "L005_Relu_out0",
+   "values": 38400,
+   "mismatches": 0
+  },
+  {
+   "layer": "L006_Conv",
+   "tensor": "L007_Relu_out0",
+   "values": 38400,
+   "mismatches": 0
+  },
+  {
+   "layer": "L008_Conv",
+   "tensor": "L009_Relu_out0",
+   "values": 24000,
+   "mismatches": 0
+  },
+  {
+   "layer": "L010_Conv",
+   "tensor": "L011_Relu_out0",
+   "values": 24000,
+   "mismatches": 0
+  },
+  {
+   "layer": "L012_Conv",
+   "tensor": "L013_Relu_out0",
+   "values": 24000,
+   "mismatches": 0
+  },
+  {
+   "layer": "L016_Conv",
+   "tensor": "L017_Relu_out0",
+   "values": 38400,
+   "mismatches": 0
+  },
+  {
+   "layer": "L018_Conv",
+   "tensor": "L019_Relu_out0",
+   "values": 38400,
+   "mismatches": 0
+  },
+  {
+   "layer": "L022_Conv",
+   "tensor": "L023_Relu_out0",
+   "values": 76800,
+   "mismatches": 0
+  },
+  {
+   "layer": "L024_Conv",
+   "tensor": "L025_Relu_out0",
+   "values": 76800,
+   "mismatches": 0
+  },
+  {
+   "layer": "L026_Conv",
+   "tensor": "L026_Conv_out0",
+   "values": 28800,
+   "mismatches": 0
+  }
+ ],
+ "label_mismatches": 0,
+ "passed": true
+}

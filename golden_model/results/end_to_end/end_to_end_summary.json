@@ -1,0 +1,528 @@
+{
+ "scenes": [
+  {
+   "scene": "scene_01_person",
+   "coco_val_index": 716,
+   "classes_present": [
+    "person"
+   ],
+   "spi_camera_packet_bytes": 19208,
+   "spi_tof_packet_bytes": 200,
+   "camera_packet_accepted": true,
+   "tof_packet_accepted": true,
+   "tof_valid_zones": 64,
+   "label_agreement_float_vs_int8": 0.9989583333333333,
+   "uart_packet_bytes": 24225,
+   "uart_time_ms": 121.125,
+   "laptop_packet_checksum_ok": true
+  },
+  {
+   "scene": "scene_02_chair",
+   "coco_val_index": 896,
+   "classes_present": [
+    "chair"
+   ],
+   "spi_camera_packet_bytes": 19208,
+   "spi_tof_packet_bytes": 200,
+   "camera_packet_accepted": true,
+   "tof_packet_accepted": true,
+   "tof_valid_zones": 62,
+   "label_agreement_float_vs_int8": 0.994375,
+   "uart_packet_bytes": 24225,
+   "uart_time_ms": 121.125,
+   "laptop_packet_checksum_ok": true
+  },
+  {
+   "scene": "scene_03_tv_laptop_bottle",
+   "coco_val_index": 75,
+   "classes_present": [
+    "tv",
+    "laptop",
+    "bottle"
+   ],
+   "spi_camera_packet_bytes": 19208,
+   "spi_tof_packet_bytes": 200,
+   "camera_packet_accepted": true,
+   "tof_packet_accepted": true,
+   "tof_valid_zones": 62,
+   "label_agreement_float_vs_int8": 0.995625,
+   "uart_packet_bytes": 24249,
+   "uart_time_ms": 121.245,
+   "laptop_packet_checksum_ok": true
+  },
+  {
+   "scene": "scene_04_person_tv",
+   "coco_val_index": 379,
+   "classes_present": [
+    "person",
+    "tv"
+   ],
+   "spi_camera_packet_bytes": 19208,
+   "spi_tof_packet_bytes": 200,
+   "camera_packet_accepted": true,
+   "tof_packet_accepted": true,
+   "tof_valid_zones": 61,
+   "label_agreement_float_vs_int8": 0.9929166666666667,
+   "uart_packet_bytes": 24237,
+   "uart_time_ms": 121.185,
+   "laptop_packet_checksum_ok": true
+  },
+  {
+   "scene": "scene_05_person_bottle",
+   "coco_val_index": 123,
+   "classes_present": [
+    "person",
+    "bottle"
+   ],
+   "spi_camera_packet_bytes": 19208,
+   "spi_tof_packet_bytes": 200,
+   "camera_packet_accepted": true,
+   "tof_packet_accepted": true,
+   "tof_valid_zones": 64,
+   "label_agreement_float_vs_int8": 0.9929166666666667,
+   "uart_packet_bytes": 24237,
+   "uart_time_ms": 121.185,
+   "laptop_packet_checksum_ok": true
+  },
+  {
+   "scene": "scene_06_person_tv",
+   "coco_val_index": 895,
+   "classes_present": [
+    "person",
+    "tv"
+   ],
+   "spi_camera_packet_bytes": 19208,
+   "spi_tof_packet_bytes": 200,
+   "camera_packet_accepted": true,
+   "tof_packet_accepted": true,
+   "tof_valid_zones": 60,
+   "label_agreement_float_vs_int8": 0.9910416666666667,
+   "uart_packet_bytes": 24261,
+   "uart_time_ms": 121.30499999999999,
+   "laptop_packet_checksum_ok": true
+  },
+  {
+   "scene": "scene_07_person_bottle",
+   "coco_val_index": 576,
+   "classes_present": [
+    "person",
+    "bottle"
+   ],
+   "spi_camera_packet_bytes": 19208,
+   "spi_tof_packet_bytes": 200,
+   "camera_packet_accepted": true,
+   "tof_packet_accepted": true,
+   "tof_valid_zones": 62,
+   "label_agreement_float_vs_int8": 0.9704166666666667,
+   "uart_packet_bytes": 24249,
+   "uart_time_ms": 121.245,
+   "laptop_packet_checksum_ok": true
+  },
+  {
+   "scene": "scene_08_person_laptop",
+   "coco_val_index": 603,
+   "classes_present": [
+    "person",
+    "laptop"
+   ],
+   "spi_camera_packet_bytes": 19208,
+   "spi_tof_packet_bytes": 200,
+   "camera_packet_accepted": true,
+   "tof_packet_accepted": true,
+   "tof_valid_zones": 62,
+   "label_agreement_float_vs_int8": 0.995,
+   "uart_packet_bytes": 24237,
+   "uart_time_ms": 121.185,
+   "laptop_packet_checksum_ok": true
+  }
+ ],
+ "objects": [
+  {
+   "scene": 1,
+   "id": 1,
+   "cls": "person",
+   "area_px": 141,
+   "box_80x60": [
+    32,
+    27,
+    41,
+    49
+   ],
+   "fpga_distance_mm": 2311,
+   "zones_used": 2,
+   "true_depth_mm": 2318,
+   "true_class": "person",
+   "error_mm": -7
+  },
+  {
+   "scene": 2,
+   "id": 1,
+   "cls": "chair",
+   "area_px": 140,
+   "box_80x60": [
+    12,
+    36,
+    25,
+    51
+   ],
+   "fpga_distance_mm": 1041,
+   "zones_used": 1,
+   "true_depth_mm": 1039,
+   "true_class": "chair",
+   "error_mm": 2
+  },
+  {
+   "scene": 3,
+   "id": 1,
+   "cls": "tv",
+   "area_px": 483,
+   "box_80x60": [
+    30,
+    13,
+    53,
+    33
+   ],
+   "fpga_distance_mm": 2230,
+   "zones_used": 7,
+   "true_depth_mm": 2238,
+   "true_class": "tv",
+   "error_mm": -8
+  },
+  {
+   "scene": 3,
+   "id": 2,
+   "cls": "laptop",
+   "area_px": 182,
+   "box_80x60": [
+    62,
+    28,
+    77,
+    42
+   ],
+   "fpga_distance_mm": 1083,
+   "zones_used": 2,
+   "true_depth_mm": 1081,
+   "true_class": "laptop",
+   "error_mm": 2
+  },
+  {
+   "scene": 3,
+   "id": 3,
+   "cls": "bottle",
+   "area_px": 83,
+   "box_80x60": [
+    73,
+    35,
+    79,
+    49
+   ],
+   "fpga_distance_mm": 3394,
+   "zones_used": 1,
+   "true_depth_mm": 2176,
+   "true_class": "bottle",
+   "error_mm": 1218
+  },
+  {
+   "scene": 4,
+   "id": 1,
+   "cls": "person",
+   "area_px": 560,
+   "box_80x60": [
+    54,
+    6,
+    73,
+    53
+   ],
+   "fpga_distance_mm": 1672,
+   "zones_used": 9,
+   "true_depth_mm": 1678,
+   "true_class": "person",
+   "error_mm": -6
+  },
+  {
+   "scene": 4,
+   "id": 2,
+   "cls": "tv",
+   "area_px": 107,
+   "box_80x60": [
+    22,
+    26,
+    32,
+    36
+   ],
+   "fpga_distance_mm": 1237,
+   "zones_used": 2,
+   "true_depth_mm": 1238,
+   "true_class": "tv",
+   "error_mm": -1
+  },
+  {
+   "scene": 5,
+   "id": 1,
+   "cls": "person",
+   "area_px": 1618,
+   "box_80x60": [
+    10,
+    2,
+    59,
+    53
+   ],
+   "fpga_distance_mm": 2494,
+   "zones_used": 28,
+   "true_depth_mm": 2497,
+   "true_class": "person",
+   "error_mm": -3
+  },
+  {
+   "scene": 5,
+   "id": 2,
+   "cls": "bottle",
+   "area_px": 256,
+   "box_80x60": [
+    56,
+    34,
+    72,
+    59
+   ],
+   "fpga_distance_mm": 1980,
+   "zones_used": 5,
+   "true_depth_mm": 1983,
+   "true_class": "bottle",
+   "error_mm": -3
+  },
+  {
+   "scene": 6,
+   "id": 1,
+   "cls": "tv",
+   "area_px": 340,
+   "box_80x60": [
+    44,
+    14,
+    63,
+    32
+   ],
+   "fpga_distance_mm": 1560,
+   "zones_used": 5,
+   "true_depth_mm": 1562,
+   "true_class": "tv",
+   "error_mm": -2
+  },
+  {
+   "scene": 6,
+   "id": 2,
+   "cls": "person",
+   "area_px": 567,
+   "box_80x60": [
+    0,
+    23,
+    19,
+    59
+   ],
+   "fpga_distance_mm": 2490,
+   "zones_used": 7,
+   "true_depth_mm": 2494,
+   "true_class": "person",
+   "error_mm": -4
+  },
+  {
+   "scene": 6,
+   "id": 3,
+   "cls": "person",
+   "area_px": 304,
+   "box_80x60": [
+    35,
+    34,
+    51,
+    59
+   ],
+   "fpga_distance_mm": 2003,
+   "zones_used": 6,
+   "true_depth_mm": 2011,
+   "true_class": "person",
+   "error_mm": -8
+  },
+  {
+   "scene": 6,
+   "id": 4,
+   "cls": "person",
+   "area_px": 278,
+   "box_80x60": [
+    61,
+    36,
+    78,
+    59
+   ],
+   "fpga_distance_mm": 1689,
+   "zones_used": 4,
+   "true_depth_mm": 1698,
+   "true_class": "person",
+   "error_mm": -9
+  },
+  {
+   "scene": 7,
+   "id": 1,
+   "cls": "person",
+   "area_px": 2328,
+   "box_80x60": [
+    26,
+    0,
+    79,
+    59
+   ],
+   "fpga_distance_mm": 1994,
+   "zones_used": 36,
+   "true_depth_mm": 1995,
+   "true_class": "person",
+   "error_mm": -1
+  },
+  {
+   "scene": 7,
+   "id": 2,
+   "cls": "bottle",
+   "area_px": 196,
+   "box_80x60": [
+    16,
+    34,
+    32,
+    52
+   ],
+   "fpga_distance_mm": 1368,
+   "zones_used": 4,
+   "true_depth_mm": 1376,
+   "true_class": "bottle",
+   "error_mm": -8
+  },
+  {
+   "scene": 7,
+   "id": 3,
+   "cls": "person",
+   "area_px": 78,
+   "box_80x60": [
+    63,
+    51,
+    76,
+    59
+   ],
+   "fpga_distance_mm": 2009,
+   "zones_used": 1,
+   "true_depth_mm": 1995,
+   "true_class": "person",
+   "error_mm": 14
+  },
+  {
+   "scene": 8,
+   "id": 1,
+   "cls": "person",
+   "area_px": 958,
+   "box_80x60": [
+    46,
+    15,
+    79,
+    59
+   ],
+   "fpga_distance_mm": 2107,
+   "zones_used": 13,
+   "true_depth_mm": 2111,
+   "true_class": "person",
+   "error_mm": -4
+  },
+  {
+   "scene": 8,
+   "id": 2,
+   "cls": "laptop",
+   "area_px": 491,
+   "box_80x60": [
+    0,
+    32,
+    27,
+    57
+   ],
+   "fpga_distance_mm": 950,
+   "zones_used": 5,
+   "true_depth_mm": 954,
+   "true_class": "laptop",
+   "error_mm": -4
+  }
+ ],
+ "packet_checks": [
+  {
+   "case": "camera packet, 1 bit flipped",
+   "accepted": false,
+   "reason": "checksum"
+  },
+  {
+   "case": "camera packet, last 100 bytes missing",
+   "accepted": false,
+   "reason": "length 19108 != 19208"
+  },
+  {
+   "case": "camera packet, wrong magic",
+   "accepted": false,
+   "reason": "bad magic"
+  },
+  {
+   "case": "ToF packet, 1 byte changed",
+   "accepted": false,
+   "reason": "checksum"
+  },
+  {
+   "case": "ToF packet, truncated",
+   "accepted": false,
+   "reason": "length 120 != 200"
+  },
+  {
+   "case": "camera packet, intact",
+   "accepted": true,
+   "reason": "ok"
+  },
+  {
+   "case": "ToF packet, intact",
+   "accepted": true,
+   "reason": "ok"
+  }
+ ],
+ "distance_error": {
+  "n": 18,
+  "median_abs_mm": 4.0,
+  "mean_abs_mm": 72.44444444444444,
+  "within_5pct": 0.9444444444444444,
+  "within_10pct": 0.9444444444444444,
+  "no_distance": 0
+ },
+ "timing_budget_ms": [
+  {
+   "stage": "ESP32-CAM -> FPGA, SPI 8 MHz, 19 208 B",
+   "ms": 19.208,
+   "source": "link rate"
+  },
+  {
+   "stage": "ToF ESP32 -> FPGA, SPI 4 MHz, 200 B (every 100 ms)",
+   "ms": 0.4,
+   "source": "link rate"
+  },
+  {
+   "stage": "U-Net accelerator, 1 327 877 cycles @ 100 MHz",
+   "ms": 13.27877,
+   "source": "RTL simulation"
+  },
+  {
+   "stage": "Objects + distance, 0.22-0.52 M cycles",
+   "ms": 5.18,
+   "source": "RTL simulation (max)"
+  },
+  {
+   "stage": "FPGA -> laptop, UART 2 Mbaud, with image (~24.2 KB)",
+   "ms": 121.245,
+   "source": "link rate"
+  },
+  {
+   "stage": "FPGA -> laptop, UART 2 Mbaud, no image (~5.0 KB)",
+   "ms": 25.245,
+   "source": "link rate"
+  }
+ ],
+ "fps_limit": {
+  "with_image": 8.247762794342034,
+  "without_image": 39.61180431768667
+ }
+}

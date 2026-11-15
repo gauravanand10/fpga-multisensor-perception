@@ -1,0 +1,14 @@
+Python reference model vs RTL simulation (UART bytes from Vivado xsim)
+
+  SPI tb_tof0.mem     200 B  -> accepted
+  SPI tb_cam0.mem   19208 B  -> accepted
+  SPI tb_cam1.mem   19208 B  -> REJECTED (checksum)
+  SPI tb_tof1.mem     200 B  -> accepted
+  SPI tb_cam2.mem   19208 B  -> accepted
+
+  UART capture: 33518 bytes, 2 checksum-valid packets; model: 2 packets
+
+  packet 0: model 24225 B, RTL 24225 B, differing bytes 0, 1 objects | RTL measured U-Net 1327877 cycles (13.28 ms), post-processing 333634 cycles (3.34 ms)
+  packet 1: model 5025 B, RTL 5025 B, differing bytes 0, 1 objects | RTL measured U-Net 1327877 cycles (13.28 ms), post-processing 340123 cycles (3.40 ms)
+
+PASS: every UART byte of the RTL equals the Python model; corrupted camera packet rejected by both

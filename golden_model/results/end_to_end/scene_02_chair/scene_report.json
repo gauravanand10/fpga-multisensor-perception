@@ -1,0 +1,34 @@
+{
+ "scene": "scene_02_chair",
+ "coco_val_index": 896,
+ "classes_present": [
+  "chair"
+ ],
+ "spi_camera_packet_bytes": 19208,
+ "spi_tof_packet_bytes": 200,
+ "camera_packet_accepted": true,
+ "tof_packet_accepted": true,
+ "tof_valid_zones": 62,
+ "label_agreement_float_vs_int8": 0.994375,
+ "uart_packet_bytes": 24225,
+ "uart_time_ms": 121.125,
+ "laptop_packet_checksum_ok": true,
+ "objects": [
+  {
+   "id": 1,
+   "cls": "chair",
+   "area_px": 140,
+   "box_80x60": [
+    12,
+    36,
+    25,
+    51
+   ],
+   "fpga_distance_mm": 1041,
+   "zones_used": 1,
+   "true_depth_mm": 1039,
+   "true_class": "chair",
+   "error_mm": 2
+  }
+ ]
+}

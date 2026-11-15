@@ -1,0 +1,68 @@
+{
+ "scene": "scene_03_tv_laptop_bottle",
+ "coco_val_index": 75,
+ "classes_present": [
+  "tv",
+  "laptop",
+  "bottle"
+ ],
+ "spi_camera_packet_bytes": 19208,
+ "spi_tof_packet_bytes": 200,
+ "camera_packet_accepted": true,
+ "tof_packet_accepted": true,
+ "tof_valid_zones": 62,
+ "label_agreement_float_vs_int8": 0.995625,
+ "uart_packet_bytes": 24249,
+ "uart_time_ms": 121.245,
+ "laptop_packet_checksum_ok": true,
+ "objects": [
+  {
+   "id": 1,
+   "cls": "tv",
+   "area_px": 483,
+   "box_80x60": [
+    30,
+    13,
+    53,
+    33
+   ],
+   "fpga_distance_mm": 2230,
+   "zones_used": 7,
+   "true_depth_mm": 2238,
+   "true_class": "tv",
+   "error_mm": -8
+  },
+  {
+   "id": 2,
+   "cls": "laptop",
+   "area_px": 182,
+   "box_80x60": [
+    62,
+    28,
+    77,
+    42
+   ],
+   "fpga_distance_mm": 1083,
+   "zones_used": 2,
+   "true_depth_mm": 1081,
+   "true_class": "laptop",
+   "error_mm": 2
+  },
+  {
+   "id": 3,
+   "cls": "bottle",
+   "area_px": 83,
+   "box_80x60": [
+    73,
+    35,
+    79,
+    49
+   ],
+   "fpga_distance_mm": 3394,
+   "zones_used": 1,
+   "true_depth_mm": 2176,
+   "true_class": "bottle",
+   "error_mm": 1218
+  }
+ ]
+}

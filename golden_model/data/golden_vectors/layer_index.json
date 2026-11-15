@@ -1,0 +1,469 @@
+{
+ "model": "tiny_unet",
+ "qmax": 127,
+ "input_tensor": "gray",
+ "layers": [
+  {
+   "idx": 0,
+   "op": "Conv",
+   "tensor": "_net_stem_stem_0_stem_0_0_Conv_output_0",
+   "shape": [
+    1,
+    16,
+    60,
+    80
+   ],
+   "dtype": "int8",
+   "scale": 0.1118885800242424,
+   "inputs": [
+    "gray",
+    "net_stem_0_0_weight",
+    "net_stem_0_0_bias"
+   ]
+  },
+  {
+   "idx": 1,
+   "op": "Relu",
+   "tensor": "_net_stem_stem_0_stem_0_1_Relu_output_0",
+   "shape": [
+    1,
+    16,
+    60,
+    80
+   ],
+   "dtype": "int8",
+   "scale": 0.1118885800242424,
+   "inputs": [
+    "_net_stem_stem_0_stem_0_0_Conv_output_0"
+   ]
+  },
+  {
+   "idx": 2,
+   "op": "Conv",
+   "tensor": "_net_stem_stem_1_stem_1_0_Conv_output_0",
+   "shape": [
+    1,
+    16,
+    60,
+    80
+   ],
+   "dtype": "int8",
+   "scale": 0.09669621288776398,
+   "inputs": [
+    "_net_stem_stem_0_stem_0_1_Relu_output_0",
+    "net_stem_1_0_weight",
+    "net_stem_1_0_bias"
+   ]
+  },
+  {
+   "idx": 3,
+   "op": "Relu",
+   "tensor": "_net_stem_stem_1_stem_1_1_Relu_output_0",
+   "shape": [
+    1,
+    16,
+    60,
+    80
+   ],
+   "dtype": "int8",
+   "scale": 0.09669621288776398,
+   "inputs": [
+    "_net_stem_stem_1_stem_1_0_Conv_output_0"
+   ]
+  },
+  {
+   "idx": 4,
+   "op": "Conv",
+   "tensor": "_net_down1_down1_0_down1_0_0_Conv_output_0",
+   "shape": [
+    1,
+    32,
+    30,
+    40
+   ],
+   "dtype": "int8",
+   "scale": 0.10263051837682724,
+   "inputs": [
+    "_net_stem_stem_1_stem_1_1_Relu_output_0",
+    "net_down1_0_0_weight",
+    "net_down1_0_0_bias"
+   ]
+  },
+  {
+   "idx": 5,
+   "op": "Relu",
+   "tensor": "_net_down1_down1_0_down1_0_1_Relu_output_0",
+   "shape": [
+    1,
+    32,
+    30,
+    40
+   ],
+   "dtype": "int8",
+   "scale": 0.10263051837682724,
+   "inputs": [
+    "_net_down1_down1_0_down1_0_0_Conv_output_0"
+   ]
+  },
+  {
+   "idx": 6,
+   "op": "Conv",
+   "tensor": "_net_down1_down1_1_down1_1_0_Conv_output_0",
+   "shape": [
+    1,
+    32,
+    30,
+    40
+   ],
+   "dtype": "int8",
+   "scale": 0.06172656640410423,
+   "inputs": [
+    "_net_down1_down1_0_down1_0_1_Relu_output_0",
+    "net_down1_1_0_weight",
+    "net_down1_1_0_bias"
+   ]
+  },
+  {
+   "idx": 7,
+   "op": "Relu",
+   "tensor": "_net_down1_down1_1_down1_1_1_Relu_output_0",
+   "shape": [
+    1,
+    32,
+    30,
+    40
+   ],
+   "dtype": "int8",
+   "scale": 0.06172656640410423,
+   "inputs": [
+    "_net_down1_down1_1_down1_1_0_Conv_output_0"
+   ]
+  },
+  {
+   "idx": 8,
+   "op": "Conv",
+   "tensor": "_net_down2_down2_0_down2_0_0_Conv_output_0",
+   "shape": [
+    1,
+    80,
+    15,
+    20
+   ],
+   "dtype": "int8",
+   "scale": 0.0541142076253891,
+   "inputs": [
+    "_net_down1_down1_1_down1_1_1_Relu_output_0",
+    "net_down2_0_0_weight",
+    "net_down2_0_0_bias"
+   ]
+  },
+  {
+   "idx": 9,
+   "op": "Relu",
+   "tensor": "_net_down2_down2_0_down2_0_1_Relu_output_0",
+   "shape": [
+    1,
+    80,
+    15,
+    20
+   ],
+   "dtype": "int8",
+   "scale": 0.0541142076253891,
+   "inputs": [
+    "_net_down2_down2_0_down2_0_0_Conv_output_0"
+   ]
+  },
+  {
+   "idx": 10,
+   "op": "Conv",
+   "tensor": "_net_down2_down2_1_down2_1_0_Conv_output_0",
+   "shape": [
+    1,
+    80,
+    15,
+    20
+   ],
+   "dtype": "int8",
+   "scale": 0.058848828077316284,
+   "inputs": [
+    "_net_down2_down2_0_down2_0_1_Relu_output_0",
+    "net_down2_1_0_weight",
+    "net_down2_1_0_bias"
+   ]
+  },
+  {
+   "idx": 11,
+   "op": "Relu",
+   "tensor": "_net_down2_down2_1_down2_1_1_Relu_output_0",
+   "shape": [
+    1,
+    80,
+    15,
+    20
+   ],
+   "dtype": "int8",
+   "scale": 0.058848828077316284,
+   "inputs": [
+    "_net_down2_down2_1_down2_1_0_Conv_output_0"
+   ]
+  },
+  {
+   "idx": 12,
+   "op": "Conv",
+   "tensor": "_net_down2_down2_2_down2_2_0_Conv_output_0",
+   "shape": [
+    1,
+    80,
+    15,
+    20
+   ],
+   "dtype": "int8",
+   "scale": 0.07020888477563858,
+   "inputs": [
+    "_net_down2_down2_1_down2_1_1_Relu_output_0",
+    "net_down2_2_0_weight",
+    "net_down2_2_0_bias"
+   ]
+  },
+  {
+   "idx": 13,
+   "op": "Relu",
+   "tensor": "_net_down2_down2_2_down2_2_1_Relu_output_0",
+   "shape": [
+    1,
+    80,
+    15,
+    20
+   ],
+   "dtype": "int8",
+   "scale": 0.07020888477563858,
+   "inputs": [
+    "_net_down2_down2_2_down2_2_0_Conv_output_0"
+   ]
+  },
+  {
+   "idx": 14,
+   "op": "Resize",
+   "tensor": "_net_Resize_output_0",
+   "shape": [
+    1,
+    80,
+    30,
+    40
+   ],
+   "dtype": "int8",
+   "scale": 0.07020888477563858,
+   "inputs": [
+    "_net_down2_down2_2_down2_2_1_Relu_output_0",
+    "",
+    "_net_Constant_output_0"
+   ]
+  },
+  {
+   "idx": 15,
+   "op": "Concat",
+   "tensor": "_net_Concat_output_0",
+   "shape": [
+    1,
+    112,
+    30,
+    40
+   ],
+   "dtype": "int8",
+   "scale": 0.0646224170923233,
+   "inputs": [
+    "_net_Resize_output_0",
+    "_net_down1_down1_1_down1_1_1_Relu_output_0"
+   ]
+  },
+  {
+   "idx": 16,
+   "op": "Conv",
+   "tensor": "_net_up2_up2_0_up2_0_0_Conv_output_0",
+   "shape": [
+    1,
+    32,
+    30,
+    40
+   ],
+   "dtype": "int8",
+   "scale": 0.10878486186265945,
+   "inputs": [
+    "_net_Concat_output_0",
+    "net_up2_0_0_weight",
+    "net_up2_0_0_bias"
+   ]
+  },
+  {
+   "idx": 17,
+   "op": "Relu",
+   "tensor": "_net_up2_up2_0_up2_0_1_Relu_output_0",
+   "shape": [
+    1,
+    32,
+    30,
+    40
+   ],
+   "dtype": "int8",
+   "scale": 0.10878486186265945,
+   "inputs": [
+    "_net_up2_up2_0_up2_0_0_Conv_output_0"
+   ]
+  },
+  {
+   "idx": 18,
+   "op": "Conv",
+   "tensor": "_net_up2_up2_1_up2_1_0_Conv_output_0",
+   "shape": [
+    1,
+    32,
+    30,
+    40
+   ],
+   "dtype": "int8",
+   "scale": 0.14033427834510803,
+   "inputs": [
+    "_net_up2_up2_0_up2_0_1_Relu_output_0",
+    "net_up2_1_0_weight",
+    "net_up2_1_0_bias"
+   ]
+  },
+  {
+   "idx": 19,
+   "op": "Relu",
+   "tensor": "_net_up2_up2_1_up2_1_1_Relu_output_0",
+   "shape": [
+    1,
+    32,
+    30,
+    40
+   ],
+   "dtype": "int8",
+   "scale": 0.14033427834510803,
+   "inputs": [
+    "_net_up2_up2_1_up2_1_0_Conv_output_0"
+   ]
+  },
+  {
+   "idx": 20,
+   "op": "Resize",
+   "tensor": "_net_Resize_1_output_0",
+   "shape": [
+    1,
+    32,
+    60,
+    80
+   ],
+   "dtype": "int8",
+   "scale": 0.14033427834510803,
+   "inputs": [
+    "_net_up2_up2_1_up2_1_1_Relu_output_0",
+    "",
+    "_net_Constant_1_output_0"
+   ]
+  },
+  {
+   "idx": 21,
+   "op": "Concat",
+   "tensor": "_net_Concat_1_output_0",
+   "shape": [
+    1,
+    48,
+    60,
+    80
+   ],
+   "dtype": "int8",
+   "scale": 0.13233314454555511,
+   "inputs": [
+    "_net_Resize_1_output_0",
+    "_net_stem_stem_1_stem_1_1_Relu_output_0"
+   ]
+  },
+  {
+   "idx": 22,
+   "op": "Conv",
+   "tensor": "_net_up1_up1_0_up1_0_0_Conv_output_0",
+   "shape": [
+    1,
+    16,
+    60,
+    80
+   ],
+   "dtype": "int8",
+   "scale": 0.11751072853803635,
+   "inputs": [
+    "_net_Concat_1_output_0",
+    "net_up1_0_0_weight",
+    "net_up1_0_0_bias"
+   ]
+  },
+  {
+   "idx": 23,
+   "op": "Relu",
+   "tensor": "_net_up1_up1_0_up1_0_1_Relu_output_0",
+   "shape": [
+    1,
+    16,
+    60,
+    80
+   ],
+   "dtype": "int8",
+   "scale": 0.11751072853803635,
+   "inputs": [
+    "_net_up1_up1_0_up1_0_0_Conv_output_0"
+   ]
+  },
+  {
+   "idx": 24,
+   "op": "Conv",
+   "tensor": "_net_up1_up1_1_up1_1_0_Conv_output_0",
+   "shape": [
+    1,
+    16,
+    60,
+    80
+   ],
+   "dtype": "int8",
+   "scale": 0.0883568525314331,
+   "inputs": [
+    "_net_up1_up1_0_up1_0_1_Relu_output_0",
+    "net_up1_1_0_weight",
+    "net_up1_1_0_bias"
+   ]
+  },
+  {
+   "idx": 25,
+   "op": "Relu",
+   "tensor": "_net_up1_up1_1_up1_1_1_Relu_output_0",
+   "shape": [
+    1,
+    16,
+    60,
+    80
+   ],
+   "dtype": "int8",
+   "scale": 0.0883568525314331,
+   "inputs": [
+    "_net_up1_up1_1_up1_1_0_Conv_output_0"
+   ]
+  },
+  {
+   "idx": 26,
+   "op": "Conv",
+   "tensor": "logits",
+   "shape": [
+    1,
+    6,
+    60,
+    80
+   ],
+   "dtype": "int8",
+   "scale": 0.11010318994522095,
+   "inputs": [
+    "_net_up1_up1_1_up1_1_1_Relu_output_0",
+    "net_head_0_weight",
+    "net_head_0_bias"
+   ]
+  }
+ ]
+}

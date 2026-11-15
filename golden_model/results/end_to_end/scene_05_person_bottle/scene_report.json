@@ -1,0 +1,51 @@
+{
+ "scene": "scene_05_person_bottle",
+ "coco_val_index": 123,
+ "classes_present": [
+  "person",
+  "bottle"
+ ],
+ "spi_camera_packet_bytes": 19208,
+ "spi_tof_packet_bytes": 200,
+ "camera_packet_accepted": true,
+ "tof_packet_accepted": true,
+ "tof_valid_zones": 64,
+ "label_agreement_float_vs_int8": 0.9929166666666667,
+ "uart_packet_bytes": 24237,
+ "uart_time_ms": 121.185,
+ "laptop_packet_checksum_ok": true,
+ "objects": [
+  {
+   "id": 1,
+   "cls": "person",
+   "area_px": 1618,
+   "box_80x60": [
+    10,
+    2,
+    59,
+    53
+   ],
+   "fpga_distance_mm": 2494,
+   "zones_used": 28,
+   "true_depth_mm": 2497,
+   "true_class": "person",
+   "error_mm": -3
+  },
+  {
+   "id": 2,
+   "cls": "bottle",
+   "area_px": 256,
+   "box_80x60": [
+    56,
+    34,
+    72,
+    59
+   ],
+   "fpga_distance_mm": 1980,
+   "zones_used": 5,
+   "true_depth_mm": 1983,
+   "true_class": "bottle",
+   "error_mm": -3
+  }
+ ]
+}

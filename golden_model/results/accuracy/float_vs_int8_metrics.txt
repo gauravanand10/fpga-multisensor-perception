@@ -1,0 +1,13 @@
+Float (PC, ONNX) vs int8 (FPGA) Tiny U-Net on 1000 COCO 2017 validation images
+
+  pixel agreement float vs int8 label maps : 98.17 %
+  pixel accuracy vs ground truth           : float 82.0 %, int8 82.3 %
+
+  class         IoU float   IoU int8
+  background        0.808      0.810
+  person            0.497      0.498
+  chair             0.078      0.071
+  tv                0.331      0.334
+  laptop            0.330      0.334
+  bottle            0.173      0.175
+  mean (5 obj)      0.282      0.282

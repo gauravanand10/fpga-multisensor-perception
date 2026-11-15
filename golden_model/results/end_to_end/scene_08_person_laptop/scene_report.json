@@ -1,0 +1,51 @@
+{
+ "scene": "scene_08_person_laptop",
+ "coco_val_index": 603,
+ "classes_present": [
+  "person",
+  "laptop"
+ ],
+ "spi_camera_packet_bytes": 19208,
+ "spi_tof_packet_bytes": 200,
+ "camera_packet_accepted": true,
+ "tof_packet_accepted": true,
+ "tof_valid_zones": 62,
+ "label_agreement_float_vs_int8": 0.995,
+ "uart_packet_bytes": 24237,
+ "uart_time_ms": 121.185,
+ "laptop_packet_checksum_ok": true,
+ "objects": [
+  {
+   "id": 1,
+   "cls": "person",
+   "area_px": 958,
+   "box_80x60": [
+    46,
+    15,
+    79,
+    59
+   ],
+   "fpga_distance_mm": 2107,
+   "zones_used": 13,
+   "true_depth_mm": 2111,
+   "true_class": "person",
+   "error_mm": -4
+  },
+  {
+   "id": 2,
+   "cls": "laptop",
+   "area_px": 491,
+   "box_80x60": [
+    0,
+    32,
+    27,
+    57
+   ],
+   "fpga_distance_mm": 950,
+   "zones_used": 5,
+   "true_depth_mm": 954,
+   "true_class": "laptop",
+   "error_mm": -4
+  }
+ ]
+}

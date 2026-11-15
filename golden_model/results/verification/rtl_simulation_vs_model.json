@@ -1,0 +1,50 @@
+{
+ "spi": [
+  {
+   "packet": "tb_tof0.mem",
+   "accepted": true,
+   "reason": "ok"
+  },
+  {
+   "packet": "tb_cam0.mem",
+   "accepted": true,
+   "reason": "ok"
+  },
+  {
+   "packet": "tb_cam1.mem",
+   "accepted": false,
+   "reason": "checksum"
+  },
+  {
+   "packet": "tb_tof1.mem",
+   "accepted": true,
+   "reason": "ok"
+  },
+  {
+   "packet": "tb_cam2.mem",
+   "accepted": true,
+   "reason": "ok"
+  }
+ ],
+ "packets": [
+  {
+   "packet": 0,
+   "bytes_model": 24225,
+   "bytes_rtl": 24225,
+   "differing_bytes": 0,
+   "rtl_unet_cycles": 1327877,
+   "rtl_post_cycles": 333634,
+   "n_obj": 1
+  },
+  {
+   "packet": 1,
+   "bytes_model": 5025,
+   "bytes_rtl": 5025,
+   "differing_bytes": 0,
+   "rtl_unet_cycles": 1327877,
+   "rtl_post_cycles": 340123,
+   "n_obj": 1
+  }
+ ],
+ "passed": true
+}
