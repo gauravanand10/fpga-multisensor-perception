@@ -1,0 +1,25 @@
+{
+ "classes": [
+  "background",
+  "person",
+  "chair",
+  "tv",
+  "laptop",
+  "bottle"
+ ],
+ "widths": [
+  16,
+  32,
+  80
+ ],
+ "input_hw": [
+  120,
+  160
+ ],
+ "output_hw": [
+  60,
+  80
+ ],
+ "checkpoint": "best_qat.pt",
+ "val_miou": 0.3586335001688218
+}

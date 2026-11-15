@@ -1,0 +1,7 @@
+numpy
+opencv-python
+pycocotools
+onnx
+onnxruntime
+pyserial
+# PyTorch with CUDA is installed separately - see README section 2, step 3

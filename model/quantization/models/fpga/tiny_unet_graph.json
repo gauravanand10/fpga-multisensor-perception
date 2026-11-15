@@ -1,0 +1,678 @@
+{
+ "model": "tiny_unet.onnx",
+ "opset": 13,
+ "io": {
+  "inputs": [
+   [
+    "gray",
+    [
+     1,
+     1,
+     120,
+     160
+    ]
+   ]
+  ],
+  "outputs": [
+   [
+    "logits",
+    [
+     1,
+     6,
+     60,
+     80
+    ]
+   ]
+  ]
+ },
+ "layers": [
+  {
+   "op": "Conv",
+   "name": "/net/stem/stem.0/stem.0.0/Conv",
+   "inputs": [
+    "gray",
+    "net_stem_0_0_weight",
+    "net_stem_0_0_bias"
+   ],
+   "outputs": [
+    "_net_stem_stem_0_stem_0_0_Conv_output_0"
+   ],
+   "attrs": {
+    "dilations": [
+     1,
+     1
+    ],
+    "group": 1,
+    "kernel_shape": [
+     3,
+     3
+    ],
+    "pads": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "strides": [
+     2,
+     2
+    ]
+   },
+   "const_inputs": [
+    "net_stem_0_0_weight",
+    "net_stem_0_0_bias"
+   ]
+  },
+  {
+   "op": "Relu",
+   "name": "/net/stem/stem.0/stem.0.1/Relu",
+   "inputs": [
+    "_net_stem_stem_0_stem_0_0_Conv_output_0"
+   ],
+   "outputs": [
+    "_net_stem_stem_0_stem_0_1_Relu_output_0"
+   ],
+   "attrs": {},
+   "const_inputs": []
+  },
+  {
+   "op": "Conv",
+   "name": "/net/stem/stem.1/stem.1.0/Conv",
+   "inputs": [
+    "_net_stem_stem_0_stem_0_1_Relu_output_0",
+    "net_stem_1_0_weight",
+    "net_stem_1_0_bias"
+   ],
+   "outputs": [
+    "_net_stem_stem_1_stem_1_0_Conv_output_0"
+   ],
+   "attrs": {
+    "dilations": [
+     1,
+     1
+    ],
+    "group": 1,
+    "kernel_shape": [
+     3,
+     3
+    ],
+    "pads": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "strides": [
+     1,
+     1
+    ]
+   },
+   "const_inputs": [
+    "net_stem_1_0_weight",
+    "net_stem_1_0_bias"
+   ]
+  },
+  {
+   "op": "Relu",
+   "name": "/net/stem/stem.1/stem.1.1/Relu",
+   "inputs": [
+    "_net_stem_stem_1_stem_1_0_Conv_output_0"
+   ],
+   "outputs": [
+    "_net_stem_stem_1_stem_1_1_Relu_output_0"
+   ],
+   "attrs": {},
+   "const_inputs": []
+  },
+  {
+   "op": "Conv",
+   "name": "/net/down1/down1.0/down1.0.0/Conv",
+   "inputs": [
+    "_net_stem_stem_1_stem_1_1_Relu_output_0",
+    "net_down1_0_0_weight",
+    "net_down1_0_0_bias"
+   ],
+   "outputs": [
+    "_net_down1_down1_0_down1_0_0_Conv_output_0"
+   ],
+   "attrs": {
+    "dilations": [
+     1,
+     1
+    ],
+    "group": 1,
+    "kernel_shape": [
+     3,
+     3
+    ],
+    "pads": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "strides": [
+     2,
+     2
+    ]
+   },
+   "const_inputs": [
+    "net_down1_0_0_weight",
+    "net_down1_0_0_bias"
+   ]
+  },
+  {
+   "op": "Relu",
+   "name": "/net/down1/down1.0/down1.0.1/Relu",
+   "inputs": [
+    "_net_down1_down1_0_down1_0_0_Conv_output_0"
+   ],
+   "outputs": [
+    "_net_down1_down1_0_down1_0_1_Relu_output_0"
+   ],
+   "attrs": {},
+   "const_inputs": []
+  },
+  {
+   "op": "Conv",
+   "name": "/net/down1/down1.1/down1.1.0/Conv",
+   "inputs": [
+    "_net_down1_down1_0_down1_0_1_Relu_output_0",
+    "net_down1_1_0_weight",
+    "net_down1_1_0_bias"
+   ],
+   "outputs": [
+    "_net_down1_down1_1_down1_1_0_Conv_output_0"
+   ],
+   "attrs": {
+    "dilations": [
+     1,
+     1
+    ],
+    "group": 1,
+    "kernel_shape": [
+     3,
+     3
+    ],
+    "pads": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "strides": [
+     1,
+     1
+    ]
+   },
+   "const_inputs": [
+    "net_down1_1_0_weight",
+    "net_down1_1_0_bias"
+   ]
+  },
+  {
+   "op": "Relu",
+   "name": "/net/down1/down1.1/down1.1.1/Relu",
+   "inputs": [
+    "_net_down1_down1_1_down1_1_0_Conv_output_0"
+   ],
+   "outputs": [
+    "_net_down1_down1_1_down1_1_1_Relu_output_0"
+   ],
+   "attrs": {},
+   "const_inputs": []
+  },
+  {
+   "op": "Conv",
+   "name": "/net/down2/down2.0/down2.0.0/Conv",
+   "inputs": [
+    "_net_down1_down1_1_down1_1_1_Relu_output_0",
+    "net_down2_0_0_weight",
+    "net_down2_0_0_bias"
+   ],
+   "outputs": [
+    "_net_down2_down2_0_down2_0_0_Conv_output_0"
+   ],
+   "attrs": {
+    "dilations": [
+     1,
+     1
+    ],
+    "group": 1,
+    "kernel_shape": [
+     3,
+     3
+    ],
+    "pads": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "strides": [
+     2,
+     2
+    ]
+   },
+   "const_inputs": [
+    "net_down2_0_0_weight",
+    "net_down2_0_0_bias"
+   ]
+  },
+  {
+   "op": "Relu",
+   "name": "/net/down2/down2.0/down2.0.1/Relu",
+   "inputs": [
+    "_net_down2_down2_0_down2_0_0_Conv_output_0"
+   ],
+   "outputs": [
+    "_net_down2_down2_0_down2_0_1_Relu_output_0"
+   ],
+   "attrs": {},
+   "const_inputs": []
+  },
+  {
+   "op": "Conv",
+   "name": "/net/down2/down2.1/down2.1.0/Conv",
+   "inputs": [
+    "_net_down2_down2_0_down2_0_1_Relu_output_0",
+    "net_down2_1_0_weight",
+    "net_down2_1_0_bias"
+   ],
+   "outputs": [
+    "_net_down2_down2_1_down2_1_0_Conv_output_0"
+   ],
+   "attrs": {
+    "dilations": [
+     1,
+     1
+    ],
+    "group": 1,
+    "kernel_shape": [
+     3,
+     3
+    ],
+    "pads": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "strides": [
+     1,
+     1
+    ]
+   },
+   "const_inputs": [
+    "net_down2_1_0_weight",
+    "net_down2_1_0_bias"
+   ]
+  },
+  {
+   "op": "Relu",
+   "name": "/net/down2/down2.1/down2.1.1/Relu",
+   "inputs": [
+    "_net_down2_down2_1_down2_1_0_Conv_output_0"
+   ],
+   "outputs": [
+    "_net_down2_down2_1_down2_1_1_Relu_output_0"
+   ],
+   "attrs": {},
+   "const_inputs": []
+  },
+  {
+   "op": "Conv",
+   "name": "/net/down2/down2.2/down2.2.0/Conv",
+   "inputs": [
+    "_net_down2_down2_1_down2_1_1_Relu_output_0",
+    "net_down2_2_0_weight",
+    "net_down2_2_0_bias"
+   ],
+   "outputs": [
+    "_net_down2_down2_2_down2_2_0_Conv_output_0"
+   ],
+   "attrs": {
+    "dilations": [
+     1,
+     1
+    ],
+    "group": 1,
+    "kernel_shape": [
+     3,
+     3
+    ],
+    "pads": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "strides": [
+     1,
+     1
+    ]
+   },
+   "const_inputs": [
+    "net_down2_2_0_weight",
+    "net_down2_2_0_bias"
+   ]
+  },
+  {
+   "op": "Relu",
+   "name": "/net/down2/down2.2/down2.2.1/Relu",
+   "inputs": [
+    "_net_down2_down2_2_down2_2_0_Conv_output_0"
+   ],
+   "outputs": [
+    "_net_down2_down2_2_down2_2_1_Relu_output_0"
+   ],
+   "attrs": {},
+   "const_inputs": []
+  },
+  {
+   "op": "Resize",
+   "name": "/net/Resize",
+   "inputs": [
+    "_net_down2_down2_2_down2_2_1_Relu_output_0",
+    "",
+    "_net_Constant_output_0"
+   ],
+   "outputs": [
+    "_net_Resize_output_0"
+   ],
+   "attrs": {
+    "coordinate_transformation_mode": "asymmetric",
+    "cubic_coeff_a": -0.75,
+    "mode": "nearest",
+    "nearest_mode": "floor"
+   },
+   "const_inputs": [
+    "_net_Constant_output_0"
+   ]
+  },
+  {
+   "op": "Concat",
+   "name": "/net/Concat",
+   "inputs": [
+    "_net_Resize_output_0",
+    "_net_down1_down1_1_down1_1_1_Relu_output_0"
+   ],
+   "outputs": [
+    "_net_Concat_output_0"
+   ],
+   "attrs": {
+    "axis": 1
+   },
+   "const_inputs": []
+  },
+  {
+   "op": "Conv",
+   "name": "/net/up2/up2.0/up2.0.0/Conv",
+   "inputs": [
+    "_net_Concat_output_0",
+    "net_up2_0_0_weight",
+    "net_up2_0_0_bias"
+   ],
+   "outputs": [
+    "_net_up2_up2_0_up2_0_0_Conv_output_0"
+   ],
+   "attrs": {
+    "dilations": [
+     1,
+     1
+    ],
+    "group": 1,
+    "kernel_shape": [
+     3,
+     3
+    ],
+    "pads": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "strides": [
+     1,
+     1
+    ]
+   },
+   "const_inputs": [
+    "net_up2_0_0_weight",
+    "net_up2_0_0_bias"
+   ]
+  },
+  {
+   "op": "Relu",
+   "name": "/net/up2/up2.0/up2.0.1/Relu",
+   "inputs": [
+    "_net_up2_up2_0_up2_0_0_Conv_output_0"
+   ],
+   "outputs": [
+    "_net_up2_up2_0_up2_0_1_Relu_output_0"
+   ],
+   "attrs": {},
+   "const_inputs": []
+  },
+  {
+   "op": "Conv",
+   "name": "/net/up2/up2.1/up2.1.0/Conv",
+   "inputs": [
+    "_net_up2_up2_0_up2_0_1_Relu_output_0",
+    "net_up2_1_0_weight",
+    "net_up2_1_0_bias"
+   ],
+   "outputs": [
+    "_net_up2_up2_1_up2_1_0_Conv_output_0"
+   ],
+   "attrs": {
+    "dilations": [
+     1,
+     1
+    ],
+    "group": 1,
+    "kernel_shape": [
+     3,
+     3
+    ],
+    "pads": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "strides": [
+     1,
+     1
+    ]
+   },
+   "const_inputs": [
+    "net_up2_1_0_weight",
+    "net_up2_1_0_bias"
+   ]
+  },
+  {
+   "op": "Relu",
+   "name": "/net/up2/up2.1/up2.1.1/Relu",
+   "inputs": [
+    "_net_up2_up2_1_up2_1_0_Conv_output_0"
+   ],
+   "outputs": [
+    "_net_up2_up2_1_up2_1_1_Relu_output_0"
+   ],
+   "attrs": {},
+   "const_inputs": []
+  },
+  {
+   "op": "Resize",
+   "name": "/net/Resize_1",
+   "inputs": [
+    "_net_up2_up2_1_up2_1_1_Relu_output_0",
+    "",
+    "_net_Constant_1_output_0"
+   ],
+   "outputs": [
+    "_net_Resize_1_output_0"
+   ],
+   "attrs": {
+    "coordinate_transformation_mode": "asymmetric",
+    "cubic_coeff_a": -0.75,
+    "mode": "nearest",
+    "nearest_mode": "floor"
+   },
+   "const_inputs": [
+    "_net_Constant_1_output_0"
+   ]
+  },
+  {
+   "op": "Concat",
+   "name": "/net/Concat_1",
+   "inputs": [
+    "_net_Resize_1_output_0",
+    "_net_stem_stem_1_stem_1_1_Relu_output_0"
+   ],
+   "outputs": [
+    "_net_Concat_1_output_0"
+   ],
+   "attrs": {
+    "axis": 1
+   },
+   "const_inputs": []
+  },
+  {
+   "op": "Conv",
+   "name": "/net/up1/up1.0/up1.0.0/Conv",
+   "inputs": [
+    "_net_Concat_1_output_0",
+    "net_up1_0_0_weight",
+    "net_up1_0_0_bias"
+   ],
+   "outputs": [
+    "_net_up1_up1_0_up1_0_0_Conv_output_0"
+   ],
+   "attrs": {
+    "dilations": [
+     1,
+     1
+    ],
+    "group": 1,
+    "kernel_shape": [
+     3,
+     3
+    ],
+    "pads": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "strides": [
+     1,
+     1
+    ]
+   },
+   "const_inputs": [
+    "net_up1_0_0_weight",
+    "net_up1_0_0_bias"
+   ]
+  },
+  {
+   "op": "Relu",
+   "name": "/net/up1/up1.0/up1.0.1/Relu",
+   "inputs": [
+    "_net_up1_up1_0_up1_0_0_Conv_output_0"
+   ],
+   "outputs": [
+    "_net_up1_up1_0_up1_0_1_Relu_output_0"
+   ],
+   "attrs": {},
+   "const_inputs": []
+  },
+  {
+   "op": "Conv",
+   "name": "/net/up1/up1.1/up1.1.0/Conv",
+   "inputs": [
+    "_net_up1_up1_0_up1_0_1_Relu_output_0",
+    "net_up1_1_0_weight",
+    "net_up1_1_0_bias"
+   ],
+   "outputs": [
+    "_net_up1_up1_1_up1_1_0_Conv_output_0"
+   ],
+   "attrs": {
+    "dilations": [
+     1,
+     1
+    ],
+    "group": 1,
+    "kernel_shape": [
+     3,
+     3
+    ],
+    "pads": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "strides": [
+     1,
+     1
+    ]
+   },
+   "const_inputs": [
+    "net_up1_1_0_weight",
+    "net_up1_1_0_bias"
+   ]
+  },
+  {
+   "op": "Relu",
+   "name": "/net/up1/up1.1/up1.1.1/Relu",
+   "inputs": [
+    "_net_up1_up1_1_up1_1_0_Conv_output_0"
+   ],
+   "outputs": [
+    "_net_up1_up1_1_up1_1_1_Relu_output_0"
+   ],
+   "attrs": {},
+   "const_inputs": []
+  },
+  {
+   "op": "Conv",
+   "name": "/net/head/head.0/Conv",
+   "inputs": [
+    "_net_up1_up1_1_up1_1_1_Relu_output_0",
+    "net_head_0_weight",
+    "net_head_0_bias"
+   ],
+   "outputs": [
+    "logits"
+   ],
+   "attrs": {
+    "dilations": [
+     1,
+     1
+    ],
+    "group": 1,
+    "kernel_shape": [
+     1,
+     1
+    ],
+    "pads": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "strides": [
+     1,
+     1
+    ]
+   },
+   "const_inputs": [
+    "net_head_0_weight",
+    "net_head_0_bias"
+   ]
+  }
+ ]
+}
